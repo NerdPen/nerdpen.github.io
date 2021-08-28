@@ -10393,6 +10393,7 @@ table.filter-container th {
     top: 0;
     left: 0;
     cursor: pointer;
+    z-index: 2 !important;
 }
 .homePage .banner .bannerSlider .video-cover.is-playing {
     display: none;
@@ -10403,6 +10404,7 @@ table.filter-container th {
     height: 50%;
     top: 50%;
     left: 0;
+    z-index: 1 !important;
 }
 .homePage .banner .bannerSlider .slide-item {
     position: relative;
