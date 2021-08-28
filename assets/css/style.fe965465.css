@@ -10397,6 +10397,8 @@ table.filter-container th {
 }
 .homePage .banner .bannerSlider .video-cover.is-playing {
     display: none;
+    opacity: 0;
+    pointer-events: none;
 }
 .homePage .banner .bannerSlider .youtube-player {
     position: absolute !important;
@@ -10405,6 +10407,10 @@ table.filter-container th {
     top: 50%;
     left: 0;
     z-index: 1 !important;
+    opacity: 0;
+}
+.homePage .banner .bannerSlider .youtube-player.is-playing {
+    opacity: 1;
 }
 .homePage .banner .bannerSlider .slide-item {
     position: relative;
