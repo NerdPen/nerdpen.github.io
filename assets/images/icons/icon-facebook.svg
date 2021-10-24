@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100%" height="20px" viewBox="0 0 9 19">
+    <defs>
+        <path id="xfceosy7ba" d="M0 0.445L8.55 0.445 8.55 18.729 0 18.729z"/>
+    </defs>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <g>
+                    <g transform="translate(-1099 -3924) translate(0 3738) translate(1099 169) translate(0 17)">
+                        <mask id="376daramib" fill="#fff">
+                            <use xlink:href="#xfceosy7ba"/>
+                        </mask>
+                        <path fill="#FFF" d="M1.884 9.659v8.84c0 .127.104.23.231.23H5.42c.128 0 .231-.103.231-.23V9.514h2.396c.12 0 .221-.091.231-.21l.23-2.708c.012-.134-.095-.25-.231-.25H5.651v-1.92c0-.45.368-.815.821-.815h1.846c.128 0 .232-.102.232-.23V.675c0-.127-.104-.23-.232-.23H5.2c-1.83 0-3.315 1.474-3.315 3.293v2.61H.232c-.128 0-.232.103-.232.23v2.707c0 .127.104.23.232.23h1.652v.144z" mask="url(#376daramib)"/>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
