@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en" class="font-sans text-gray-700 bg-gray-100 antialiased">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@300;400;500;600&family=Prata&display=swap"
+          rel="stylesheet">
+    <!--Google reCaptcha API-->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <title>全真</title>
+<link href="assets/css/vendors.d1ad5cc8.css" rel="stylesheet"><link href="assets/css/style.d1ad5cc8.css" rel="stylesheet"></head>
+<body>
+
+<div class="aboutPage page">
+    <!-- Header -->
+    <header id="header" class="header">
+        <div class="header-inner">
+            <!--Logo-->
+            <a href="index.html" class="logo">
+                <img src="assets/images/logos/true-logo@2x.png" alt="">
+            </a>
+            <!--Navigation Desktop-->
+            <nav class="nav-md hide-on-med-and-down">
+                <div class="nav-inner">
+                    <ul class="nav-list">
+                        <li>
+                            <div class="dropdown-wrapper">
+                                <a href="about.html" class="nav-link with-icon font-serif">
+                                    <span>關於TRUE集團</span>
+                                    <span class="font-prata">TRUE Group</span>
+                                </a>
+                                <div class="nav-dropdown">
+                                    <div class="nav-dropdown-inner">
+                                        <a href="about.html#History" class="nav-link font-serif">
+                                            <span>TRUE Group 歷史</span>
+                                            <span class="font-prata">TRUE Group History</span>
+                                        </a>
+                                        <a href="about.html#BusinessProgram" class="nav-link font-serif">
+                                            <span>團體企業方案</span>
+                                            <span class="font-prata">Business Program</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="clubs.html" class="nav-link with-icon font-serif">
+                                <span>會館介紹</span>
+                                <span class="font-prata">Clubs</span>
+                            </a>
+                        </li>
+                        <li>
+                            <div class="dropdown-wrapper">
+                                <a href="classes.html" class="nav-link with-icon font-serif">
+                                    <span>團體課程</span>
+                                    <span class="font-prata">Classes</span>
+                                </a>
+                                <div class="nav-dropdown">
+                                    <div class="nav-dropdown-inner">
+                                        <a href="classes.html#Benefits" class="nav-link font-serif">
+                                            <span>團體課程好處</span>
+                                            <span class="font-prata">Benefits</span>
+                                        </a>
+                                        <a href="classes.html#ClassIntroduction" class="nav-link font-serif">
+                                            <span>課程介紹</span>
+                                            <span class="font-prata">Classes Introduction</span>
+                                        </a>
+                                        <a href="classes.html#Instructors" class="nav-link font-serif">
+                                            <span>師資陣容</span>
+                                            <span class="font-prata">Instructors</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dropdown-wrapper">
+                                <a href="trainers.html" class="nav-link with-icon font-serif">
+                                    <span>私人教練</span>
+                                    <span class="font-prata">Trainers</span>
+                                </a>
+                                <div class="nav-dropdown">
+                                    <div class="nav-dropdown-inner">
+                                        <a href="trainers.html#Benefits" class="nav-link font-serif">
+                                            <span>一對一課程好處</span>
+                                            <span class="font-prata">Benefits</span>
+                                        </a>
+                                        <a href="trainers.html#ClassesIntroduction" class="nav-link font-serif">
+                                            <span>課程介紹</span>
+                                            <span class="font-prata">Classes Introduction</span>
+                                        </a>
+                                        <a href="trainers.html#Trainers" class="nav-link font-serif">
+                                            <span>教練陣容</span>
+                                            <span class="font-prata">Trainers</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="fitness-info.html" class="nav-link with-icon font-serif">
+                                <span>健身101</span>
+                                <span class="font-prata">Fitness Info</span>
+                            </a>
+                        </li>
+                        <li>
+                            <div class="dropdown-wrapper">
+                                <a href="news.html" class="nav-link with-icon font-serif">
+                                    <span>消息總覽</span>
+                                    <span class="font-prata">News</span>
+                                </a>
+                                <div class="nav-dropdown">
+                                    <div class="nav-dropdown-inner">
+                                        <a href="announcement.html" class="nav-link font-serif">
+                                            <span>最新公告</span>
+                                            <span class="font-prata">Announcement</span>
+                                        </a>
+                                        <a href="news.html" class="nav-link font-serif">
+                                            <span>熱門活動</span>
+                                            <span class="font-prata">Event</span>
+                                        </a>
+                                        <a href="member-special.html" class="nav-link font-serif">
+                                            <span>會員優惠</span>
+                                            <span class="font-prata">Membership Discount</span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="schedule.html" class="nav-link with-icon font-serif">
+                                <span>課程表</span>
+                                <span class="font-prata">Schedule</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <hr class="ml-4"/>
+                <a href="https://www.trueclassbooking.com.tw/member/login.aspx" target="_blank" class="login">
+                    <img src="assets/images/icons/icon-people.svg" alt="">
+                </a>
+            </nav>
+        </div>
+        <!--Navigation Mobile-->
+        <nav class="nav-xs">
+            <span class="nav-overlay"></span>
+            <div class="nav-inner">
+                <!--Logo-->
+                <a href="/" class="logo hide-on-med-and-up">
+                    <img src="assets/images/logos/true-logo-white@2x.png" alt="">
+                </a>
+                <div class="stepper-container">
+                    <div class="list-stepper">
+                        <div class="stepper-inner">
+                            <ul class="nav-list">
+                                <li>
+                                    <div class="link-label font-serif">01&nbsp;/</div>
+                                    <button type="button" class="stepButton nav-link font-serif"
+                                            data-target="about-group">
+                                        <span>關於TRUE集團</span>
+                                        <span class="font-prata">TRUE Group</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <div class="link-label font-serif">02&nbsp;/</div>
+                                    <a href="clubs.html" class="nav-link font-serif">
+                                        <span>會館介紹</span>
+                                        <span class="font-prata">Clubs</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <div class="link-label font-serif">03&nbsp;/</div>
+                                    <button type="button" class="nav-link stepButton font-serif"
+                                            data-target="classes-group">
+                                        <span>團體課程</span>
+                                        <span class="font-prata">Classes</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <div class="link-label font-serif">04&nbsp;/</div>
+                                    <button type="button" class="nav-link stepButton font-serif"
+                                            data-target="trainers-group">
+                                        <span>私人教練</span>
+                                        <span class="font-prata">Trainers</span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <div class="link-label font-serif">05&nbsp;/</div>
+                                    <a href="fitness-info.html" class="nav-link font-serif">
+                                        <span>健身101</span>
+                                        <span class="font-prata">Fitness Info</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <div class="link-label font-serif">06&nbsp;/</div>
+                                    <button type="button" class="nav-link stepButton font-serif"
+                                            data-target="news-group">
+                                        <span>消息總覽</span>
+                                        <span class="font-prata">News</span>
+                                    </button>
+                                </li>
+                                <li class="flex flex-no-wrap">
+                                    <div class="link-label font-serif">07&nbsp;/</div>
+                                    <a href="schedule.html" class="nav-link font-serif">
+                                        <span>課程表</span>
+                                        <span class="font-prata">Schedule</span>
+                                    </a>
+                                </li>
+                                <li class="flex flex-no-wrap">
+                                    <div class="link-label font-serif">08&nbsp;/</div>
+                                    <a href="schedule.html" class="nav-link font-serif">
+                                        <span>會員登入</span>
+                                        <span class="font-prata">Sign In</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="subNav stepper-inner">
+                            <!--01:關於TRUE集團-->
+                            <div class="nav-group about-group active">
+                                <div>
+                                    <div class="link-label font-serif">01&nbsp;/</div>
+                                    <div class="nav-link font-serif">
+                                        <span>關於TRUE集團</span>
+                                        <span class="font-prata">TRUE Group</span>
+                                    </div>
+                                </div>
+                                <div class="flex justify-center">
+                                    <ul class="nav-list">
+                                        <li>
+                                            <a href="about.html#History" class="nav-link font-serif">
+                                                <span>TRUE Group 歷史</span>
+                                                <span class="font-prata">TRUE Group History</span>
+                                            </a>
+                                        </li>
+                                        <li class="flex flex-no-wrap">
+                                            <a href="about.html#BusinessProgram" class="nav-link font-serif">
+                                                <span>團體企業方案</span>
+                                                <span class="font-prata">Business Program</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!--03:團體課程-->
+                            <div class="nav-group classes-group">
+                                <div>
+                                    <div class="link-label font-serif">03&nbsp;/</div>
+                                    <div class="nav-link font-serif">
+                                        <span>團體課程</span>
+                                        <span class="font-prata">Classes</span>
+                                    </div>
+                                </div>
+                                <div class="flex justify-center">
+                                    <ul class="nav-list">
+                                        <li>
+                                            <a href="classes.html#Benefits" class="nav-link font-serif">
+                                                <span>團體課程好處</span>
+                                                <span class="font-prata">Benefits</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="classes.html#ClassIntroduction"
+                                               class="nav-link font-serif">
+                                                <span>課程介紹</span>
+                                                <span class="font-prata">Classes Introduction</span>
+                                            </a>
+                                        </li>
+                                        <li class="flex flex-no-wrap">
+                                            <a href="classes.html#Instructors" class="nav-link font-serif">
+                                                <span>師資陣容</span>
+                                                <span class="font-prata">Instructors</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!--04:私人教練-->
+                            <div class="nav-group trainers-group">
+                                <div>
+                                    <div class="link-label font-serif">04&nbsp;/</div>
+                                    <div class="nav-link font-serif">
+                                        <span>私人教練</span>
+                                        <span class="font-prata">Trainers</span>
+                                    </div>
+                                </div>
+                                <div class="flex justify-center">
+                                    <ul class="nav-list">
+                                        <li>
+                                            <a href="trainers.html#Benefits" class="nav-link font-serif">
+                                                <span>一對一課程好處</span>
+                                                <span class="font-prata">Benefits</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="trainers.html#ClassesIntroduction"
+                                               class="nav-link font-serif">
+                                                <span>課程介紹</span>
+                                                <span class="font-prata">Classes Introduction</span>
+                                            </a>
+                                        </li>
+                                        <li class="flex flex-no-wrap">
+                                            <a href="trainers.html#Trainers" class="nav-link font-serif">
+                                                <span>教練陣容</span>
+                                                <span class="font-prata">Trainers</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!--06:消息總覽-->
+                            <div class="nav-group news-group">
+                                <div>
+                                    <div class="link-label font-serif">06&nbsp;/</div>
+                                    <div class="nav-link font-serif">
+                                        <span>消息總覽</span>
+                                        <span class="font-prata">News</span>
+                                    </div>
+                                </div>
+                                <div class="flex justify-center">
+                                    <ul class="nav-list">
+                                        <li>
+                                            <a href="announcement.html" class="nav-link font-serif">
+                                                <span>最新公告</span>
+                                                <span class="font-prata">Announcement</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="news.html" class="nav-link font-serif">
+                                                <span>熱門活動</span>
+                                                <span class="font-prata">Event</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="member-special.html" class="nav-link font-serif">
+                                                <span>會員優惠</span>
+                                                <span class="font-prata">Membership Discount</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!--Back-->
+                            <button type="button" class="backBtn">
+                                <img src="assets/images/icons/icon-arrow-white-large.svg" alt="">
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!--Mobile Navigation Toggle-->
+        <button type="button" class="nav-toggle">
+            <span class="icon">
+                <span></span>
+                <span></span>
+                <span></span>
+            </span>
+        </button>
+        <!--Contact CTA-->
+        <a href="contact.html" class="contact-cta hide-on-med-and-up">
+            <img src="assets/images/graphics/cta-moible.png" alt="">
+        </a>
+    </header>
+    <!--Main-->
+    <div class="main" role="main">
+        <!-- Page Head -->
+        <div class="page-head page-banner section">
+            <div class="page-head-inner container max-1920">
+                <div class="container max-1280">
+                    <div class="cover-mask">
+                        <!--Banner-->
+                        <figure class="cover ratio-banner"></figure>
+                    </div>
+                </div>
+                <div class="section-info">
+                    <div class="container max-1100">
+                        <h2 class="page-title font-prata fitness-text text-secondary">About <br>TRUE Group</h2>
+                        <h4 class="page-caption fitness-text text-secondary">關於TRUE集團</h4>
+                    </div>
+                </div>
+            </div>
+            <!-- Breadcrumb -->
+            <div class="breadcrumb-container justify-end">
+                <div class="container max-1280">
+                    <ul class="breadcrumb justify-end sm:justify-end fitness-style">
+                        <li><a href="index.html">首頁</a></li>
+                        <li><a href="about.html" class="active">關於TRUE 集團</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Intro -->
+        <section class="intro-section section px">
+            <div class="container max-1280 mx-auto">
+                <div class="container max-1100">
+                    <div class="row spacing-2">
+                        <div class="col s12 l6">
+                            <div class="cover ratio-square"></div>
+                        </div>
+                        <div class="col s12 l6">
+                            <div class="section-info">
+                                <h3 class="section-title font-prata yellow-text">About</h3>
+                                <p class="section-caption font-prata font-size-body-2 fitness-text text-secondary">
+                                    This is True Living, This is Me Living.
+                                </p>
+                                <hr class="yellow">
+                                <p class="section-desc">
+                                    TRUE集團於2004年創立，在亞洲各地設立最頂級的瑜珈、健身事業，旗下品牌包括：True Yoga、 True Fitness、True
+                                    Dance提供消費者多元化且完整的健康服務。目前集團共24間會館、會員人數超過12萬。
+                                    <br>
+                                    <br>
+                                    創立至今，True集團已成功成為亞洲最大健身、瑜珈事業集團之一，事業版圖遍及－新加坡、台灣、及中國，提供最專業的瑜珈及最好的健身設備，幫助每個人順利達到追求健康的生活目標。並期望在未來5年內發展達到40家會館，躍升頂級國際健身品牌！
+                                    <br>
+                                    <br>
+                                    True集團在台灣深耕十年，希望帶給台灣消費者全方位的健康生活服務，以發展複合式運動健身服務為目標，積極鼓勵會員透過多元運動全面調整身心，找回內外平衡的健康狀態。
+                                </p>
+                                <hr class="yellow">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- History -->
+        <section id="History" class="history-section section px">
+            <div class="container max-1280">
+                <div class="section-info">
+                    <h2 class="font-prata section-title grey-text text-lighten-2">History</h2>
+                </div>
+                <div class="container max-640 md-max-800 mx-auto">
+                    <div id="parallaxTrigger" class="list-container">
+                        <ul class="history-list">
+                            <!--2004-->
+                            <li>
+                                <div class="history-item">
+                                    <div class="cover-2004 cover ratio-square rounded-full bg-white">
+                                        <img src="assets/images/md/about/history-2004@2x.jpg" alt=""
+                                             class="img-cover">
+                                    </div>
+                                    <div class="history-info">
+                                        <h3 class="history-year font-prata">2004</h3>
+                                        <p class="history-desc">
+                                            TRUE集團於2004年於亞洲創立以下是假字假字，以下是假字假字，進駐大台中地區，以下是假字假字，以下是假字假字以下是假字假字，以下是假字假字</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <!--2005-->
+                            <li>
+                                <div class="history-item">
+                                    <div class="cover-2004 cover ratio-square rounded-full bg-white">
+                                        <img src="assets/images/md/about/history-2005@2x.jpg" alt=""
+                                             class="img-cover">
+                                    </div>
+                                    <div class="history-info">
+                                        <h3 class="history-year font-prata">2005</h3>
+                                        <p class="history-desc">TRUE Yoga進駐台灣，展開台灣區True
+                                            Yoga的事業版圖，在信義商圈設立第一個據點，成立全台最具規模的瑜珈專業會館，特別聘請印度籍專業瑜珈教師及印度舞蹈老師，並網羅台灣區最專業的瑜珈教練團隊，將台灣的瑜珈概念推向另一個巔峰。</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <!--2008-->
+                            <li>
+                                <div class="history-item">
+                                    <div class="cover ratio-square rounded-full bg-white">
+                                        <img src="assets/images/md/about/history-2008@2x.jpg" alt=""
+                                             class="img-cover">
+                                    </div>
+                                    <div class="history-info">
+                                        <h3 class="history-year font-prata">2008</h3>
+                                        <p class="history-desc">
+                                            TRUE集團於2004年於亞洲創立以下是假字假字，以下是假字假字，進駐大台中地區，以下是假字假字，以下是假字假字以下是假字假字，以下是假字假字</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <!--2015-->
+                            <li>
+                                <div class="history-item">
+                                    <div class="cover ratio-square rounded-full bg-white">
+                                        <img src="assets/images/md/about/history-2015@2x.jpg" alt=""
+                                             class="img-cover">
+                                    </div>
+                                    <div class="history-info">
+                                        <h3 class="history-year font-prata">2015</h3>
+                                        <p class="history-desc">
+                                            TRUE集團於2004年於亞洲創立以下是假字假字，以下是假字假字，進駐大台中地區，以下是假字假字，以下是假字假字以下是假字假字，以下是假字假字</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <!--2016-->
+                            <li>
+                                <div class="history-item">
+                                    <div class="cover ratio-square rounded-full bg-white">
+                                        <img src="assets/images/md/about/history-2016@2x.jpg" alt=""
+                                             class="img-cover">
+                                    </div>
+                                    <div class="history-info">
+                                        <h3 class="history-year font-prata">2016</h3>
+                                        <p class="history-desc">
+                                            TRUE集團於2004年於亞洲創立以下是假字假字，以下是假字假字，進駐大台中地區，以下是假字假字，以下是假字假字以下是假字假字，以下是假字假字</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="history-item">
+                                    <div class="cover ratio-square rounded-full bg-white">
+                                        <img src="assets/images/md/about/history-201904@2x.jpg" alt=""
+                                             class="img-cover">
+                                    </div>
+                                    <div class="history-info">
+                                        <h3 class="history-year font-prata">2019</h3>
+                                        <p class="history-desc">2019年4月TRUE推出全新精品瑜珈品牌YOGA
+                                            EDITION，打造全台唯一的4D情境式瑜珈，力邀國外頂尖師資、引進國際級專業輔具，提供煥然一新的頂級服務。</p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="history-item">
+                                    <div class="cover ratio-square rounded-full bg-white">
+                                        <img src="assets/images/md/about/history-201905@2x.jpg" alt=""
+                                             class="img-cover">
+                                    </div>
+                                    <div class="history-info">
+                                        <h3 class="history-year font-prata">2019</h3>
+                                        <p class="history-desc">
+                                            同年5月首度邀請台灣運動員「標槍亞洲紀錄保持人」鄭兆村、「空手道世界排名頂尖選手」文姿云擔任年度代言人，並推出「TRUE HERO
+                                            CAMPAIGN尋找真英雄計劃」。</p>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="list-footer">
+                            <div class="be-continued font-size-h5 font-prata fitness-text text-secondary">To be
+                                continued…
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--BusinessProgram-->
+        <section id="BusinessProgram" class="business-section section">
+            <div class="container max-480 md-max-1100">
+                <div class="section-info">
+                    <h3 class="section-title font-prata yoga-text text-secondary">
+                        Corporate Wellness <br class="hide-on-small-only">Programmers
+                    </h3>
+                    <h5 class="section-caption yoga-text text-secondary">企業團體方案</h5>
+                </div>
+                <div class="section-desc">
+                    <div class="row">
+                        <div class="col s12 l6">
+                            <div class="cover ratio-square rounded-full"></div>
+                        </div>
+                        <div class="col s12 l6">
+                            <p class="line-height-2">
+                                True Yoga、True Dance、True Fitness全台會館擁有每周超過千堂以上的多元課程供會員選擇，各會館皆坐落於各城市的黃金地段。
+                                <br>
+                                <br>
+                                多元的瑜珈、有氧、舞蹈、飛輪、1對1私人教練、個人健康檢測與新穎的設備、舒適便利與寬敞的環境是True Yoga Fitness給顧客的承諾。
+                            </p>
+                            <div class="address-title font-size-body">企業團體方案詳洽</div>
+                            <address>
+                                <div class="address-item">
+                                    <i class="icon icon-mail"></i>
+                                    <a href="mailto:wennywang@trueyoga.com.tw" class="text-link font-size-body">
+                                        <span class="effect"> wennywang@trueyoga.com.tw</span>
+                                    </a>
+                                </div>
+                                <div class="address-item">
+                                    <i class="icon icon-tel"></i>
+                                    <a href="tel:0227161234" class="text-link font-size-body">
+                                        <span class="effect">(02)2716-1234</span>
+                                    </a>
+                                </div>
+                            </address>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Contact-->
+        <section id="contact" class="contact-section bg-grid">
+            <div class="container max-480 md-max-1100">
+                <div class="row">
+                    <div class="col s12">
+                        <div class="section-info">
+                            <h3 class="section-title font-prata fitness-text text-secondary">
+                                Marketing <br class="hide-on-med-and-down"/>Collaboration
+                            </h3>
+                            <h5 class="section-caption fitness-text text-secondary">行銷合作提案</h5>
+                        </div>
+                    </div>
+                    <div class="col s12 flex-grow">
+                        <form action="#" autocomplete="off" class="form">
+                            <div class="input-container">
+                                <label for="category">
+                                    Type<br><span>類型</span>
+                                </label>
+                                <div class="custom-select input-field">
+                                    <select id="category" class="browser-default bg-white">
+                                        <option value="1">Option 1</option>
+                                        <option value="2">Option 2</option>
+                                        <option value="3">Option 3</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="input-container">
+                                <label for="name">
+                                    Name<br><span>姓名</span>
+                                </label>
+                                <div class="input-field">
+                                    <input required id="name" type="text" placeholder="Full Name" class="validate bg-white">
+                                    <span class="helper-text" data-error="錯誤文字"></span>
+                                </div>
+                            </div>
+                            <div class="input-container">
+                                <label for="email">
+                                    Email<br><span>電子信箱</span>
+                                </label>
+                                <div class="input-field">
+                                    <input id="email" type="email" placeholder="trueyogafitness@org.com" class="validate bg-white">
+                                    <span class="helper-text" data-error="錯誤文字"></span>
+                                </div>
+                            </div>
+                            <div class="input-container">
+                                <label for="tel">
+                                    Phone<br><span>聯絡電話</span>
+                                </label>
+                                <div class="input-field">
+                                    <input id="tel" type="tel" placeholder="0912-345-678" class="validate bg-white">
+                                    <span class="helper-text" data-error="錯誤文字"></span>
+                                </div>
+                            </div>
+                            <div class="input-container">
+                                <label for="message">
+                                    Content<br><span>合作內容</span>
+                                </label>
+                                <div class="input-field bg-white">
+                                    <textarea required id="message" style="height: 150px !important;" class="materialize-textarea"></textarea>
+                                </div>
+                            </div>
+                            <!--Google reCaptcha v2-->
+                            <div class="recaptcha-container">
+                                <div class="g-recaptcha" data-sitekey="6Lew-DwaAAAAAJUYU88j8EQ3Li56bwVDpBm532ya"></div>
+                            </div>
+                            <div class="form-buttons">
+                                <button class="btn waves-effect waves-light grey" type="reset" name="action">
+                                    <span>Clear 清除</span>
+                                </button>
+                                <button class="btn waves-effect waves-light fitness secondary" type="submit" name="action">
+                                    <span>Send 送出</span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!-- Footer -->
+    <footer id="footer" class="footer">
+        <div class="container max-1280">
+            <!--Navigation-->
+            <div class="container max-800">
+                <nav>
+                    <div class="row">
+                        <div class="col">
+                            <button type="button" class="collapse-toggle">
+                                <span>QUICK LINKS</span>
+                            </button>
+                            <div class="collapse">
+                                <div class="collapse-inner">
+                                    <div>
+                                        <a href="about.html" class="nav-link">關於集團</a>
+                                        <a href="clubs.html" class="nav-link">會館介紹</a>
+                                    </div>
+                                    <div>
+                                        <a href="classes.html" class="nav-link">團體課程</a>
+                                        <a href="trainers.html" class="nav-link">私人教練</a>
+                                        <a href="schedule.html" class="nav-link">課程表</a>
+                                    </div>
+                                    <div>
+                                        <a href="news.html" class="nav-link">消息總覽</a>
+                                        <a href="fitness-info.html" class="nav-link">健身101</a>
+                                        <a href="member-special.html" class="nav-link">特約商優惠</a>
+                                        <a href="about.html#BusinessProgram" class="nav-link">企業團體方案</a>
+                                    </div>
+                                    <div>
+                                        <a href="faq.html" class="nav-link">常見問題</a>
+                                        <a href="contact.html" class="nav-link">聯絡我們</a>
+                                        <a href="global-location.html" class="nav-link">全球據點</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <button type="button" class="collapse-toggle">
+                                <span>EXTERNAL LINKS</span>
+                            </button>
+                            <div class="collapse">
+                                <div class="collapse-inner">
+                                    <div>
+                                        <a href="https://member.trueyoga.com.tw/deposit.html" target="_blank"
+                                           rel="noreferrer noopener"
+                                           class="nav-link">信託查詢</a>
+                                        <a href="career.html" target="_blank"
+                                           rel="noreferrer noopener"
+                                           class="nav-link">徵才消息</a>
+                                        <a href="https://www.trueclassbooking.com.tw/member/login.aspx" target="_blank"
+                                           rel="noreferrer noopener"
+                                           class="nav-link">會員登入</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+            <div class="footer-bottom">
+                <div class="footer-bottom-inner">
+                    <div class="logo-list">
+                        <ul class="row">
+                            <li class="col">
+                                <a href="./index.html">
+                                    <img src="assets/images/logos/true-yoga-fitness.png" alt="">
+                                </a>
+                            </li>
+                            <li class="col">
+                                <a href="https://www.yogaedition.com.tw/" target="_blank" rel="noopener noreferrer">
+                                    <img src="assets/images/logos/true-yoga-edition.png" alt="">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Social list-->
+                    <ul class="social-list">
+                        <li>
+                            <a href="https://www.facebook.com/TrueYogaFitness.Taiwan/" target="_blank"
+                               rel="noopener noreferrer" class="social-link">
+                                <img src="assets/images/icons/icon-facebook.svg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/trueyogafitness_tw/" target="_blank"
+                               rel="noopener noreferrer" class="social-link">
+                                <img src="assets/images/icons/icon-instagram.svg" alt="">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.youtube.com/channel/UCl9iURq7EfAcddkutZY4xEw" target="_blank"
+                               rel="noopener noreferrer" class="social-link">
+                                <img src="assets/images/icons/icon-youtube.svg" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!--Copyright-->
+                <div class="copyright">
+                    &copy;<span class="year">2020</span> True Yoga Fitness. All Rights Reserved.
+                </div>
+            </div>
+            <!--Back to top-->
+            <button type="button" class="topBtn">
+                <img src="assets/images/icons/icon-backtop.png" alt="">
+            </button>
+        </div>
+    </footer>
+    <!--Contact CTA-->
+    <a href="contact.html" class="contact-cta hide-on-small-only">
+        <img src="assets/images/graphics/cta.svg" alt="">
+    </a>
+</div>
+
+<script type="text/javascript" src="assets/js/vendors.d1ad5cc8.js"></script><script type="text/javascript" src="assets/js/app.d1ad5cc8.js"></script></body>
+</html>
