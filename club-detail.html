@@ -3,19 +3,21 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&family=Noto+Serif+TC:wght@300;400;500;600&family=Prata&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600&family=Noto+Sans+TC:wght@300;400;500;700&family=Prata&display=swap"
             rel="stylesheet"
         />
-        <title>全真</title>
-    <link href="assets/css/vendors.d1ad5cc8.css" rel="stylesheet"><link href="assets/css/style.d1ad5cc8.css" rel="stylesheet"></head>
+        <!--Google reCaptcha API-->
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <title>SG</title>
+    <link href="assets/css/vendors.0f744108.css" rel="stylesheet"><link href="assets/css/style.0f744108.css" rel="stylesheet"></head>
     <body>
         <div class="clubDetailPage page">
-            <!-- Header -->
-            <header id="header" class="header">
+             <!-- Header -->
+             <header id="header" class="header">
                 <div class="header-inner">
-                    <!--Logo-->
                     <a href="index.html" class="logo">
                         <img src="assets/images/logos/true-logo@2x.png" alt="" />
                     </a>
@@ -24,49 +26,24 @@
                         <div class="nav-inner">
                             <ul class="nav-list">
                                 <li>
-                                    <div class="dropdown-wrapper">
-                                        <a href="about.html" class="nav-link with-icon font-serif">
-                                            <span>關於TRUE集團</span>
-                                            <span class="font-prata">TRUE Group</span>
-                                        </a>
-                                        <div class="nav-dropdown">
-                                            <div class="nav-dropdown-inner">
-                                                <a href="about.html#History" class="nav-link font-serif">
-                                                    <span>TRUE Group 歷史</span>
-                                                    <span class="font-prata">TRUE Group History</span>
-                                                </a>
-                                                <a href="about.html#BusinessProgram" class="nav-link font-serif">
-                                                    <span>團體企業方案</span>
-                                                    <span class="font-prata">Business Program</span>
-                                                </a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </li>
-                                <li>
-                                    <a href="clubs.html" class="nav-link with-icon font-serif">
-                                        <span>會館介紹</span>
+                                    <a href="clubs.html" class="nav-link font-serif">
                                         <span class="font-prata">Clubs</span>
                                     </a>
                                 </li>
                                 <li>
                                     <div class="dropdown-wrapper">
-                                        <a href="classes.html" class="nav-link with-icon font-serif">
-                                            <span>團體課程</span>
+                                        <a href="classes.html" class="nav-link font-serif">
                                             <span class="font-prata">Classes</span>
                                         </a>
                                         <div class="nav-dropdown">
                                             <div class="nav-dropdown-inner">
                                                 <a href="classes.html#Benefits" class="nav-link font-serif">
-                                                    <span>團體課程好處</span>
                                                     <span class="font-prata">Benefits</span>
                                                 </a>
                                                 <a href="classes.html#ClassIntroduction" class="nav-link font-serif">
-                                                    <span>課程介紹</span>
                                                     <span class="font-prata">Classes Introduction</span>
                                                 </a>
                                                 <a href="classes.html#Instructors" class="nav-link font-serif">
-                                                    <span>師資陣容</span>
                                                     <span class="font-prata">Instructors</span>
                                                 </a>
                                             </div>
@@ -75,22 +52,18 @@
                                 </li>
                                 <li>
                                     <div class="dropdown-wrapper">
-                                        <a href="trainers.html" class="nav-link with-icon font-serif">
-                                            <span>私人教練</span>
-                                            <span class="font-prata">Trainers</span>
+                                        <a href="trainers.html" class="nav-link font-serif">
+                                            <span class="font-prata">Personal Training</span>
                                         </a>
                                         <div class="nav-dropdown">
                                             <div class="nav-dropdown-inner">
                                                 <a href="trainers.html#Benefits" class="nav-link font-serif">
-                                                    <span>一對一課程好處</span>
                                                     <span class="font-prata">Benefits</span>
                                                 </a>
                                                 <a href="trainers.html#ClassesIntroduction" class="nav-link font-serif">
-                                                    <span>課程介紹</span>
                                                     <span class="font-prata">Classes Introduction</span>
                                                 </a>
                                                 <a href="trainers.html#Trainers" class="nav-link font-serif">
-                                                    <span>教練陣容</span>
                                                     <span class="font-prata">Trainers</span>
                                                 </a>
                                             </div>
@@ -98,45 +71,33 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <a href="fitness-info.html" class="nav-link with-icon font-serif">
-                                        <span>健身101</span>
-                                        <span class="font-prata">Fitness Info</span>
+                                    <a href="fitness-info.html" class="nav-link font-serif">
+                                        <span class="font-prata">Fitness 101</span>
                                     </a>
                                 </li>
                                 <li>
                                     <div class="dropdown-wrapper">
-                                        <a href="news.html" class="nav-link with-icon font-serif">
-                                            <span>消息總覽</span>
-                                            <span class="font-prata">News</span>
+                                        <a href="updates.html" class="nav-link font-serif">
+                                            <span class="font-prata">Updates</span>
                                         </a>
-                                        <div class="nav-dropdown">
-                                            <div class="nav-dropdown-inner">
-                                                <a href="announcement.html" class="nav-link font-serif">
-                                                    <span>最新公告</span>
-                                                    <span class="font-prata">Announcement</span>
-                                                </a>
-                                                <a href="news.html" class="nav-link font-serif">
-                                                    <span>熱門活動</span>
-                                                    <span class="font-prata">Event</span>
-                                                </a>
-                                                <a href="member-special.html" class="nav-link font-serif">
-                                                    <span>會員優惠</span>
-                                                    <span class="font-prata">Membership Discount</span>
-                                                </a>
-                                            </div>
-                                        </div>
                                     </div>
                                 </li>
                                 <li>
-                                    <a href="schedule.html" class="nav-link with-icon font-serif">
-                                        <span>課程表</span>
-                                        <span class="font-prata">Schedule</span>
+                                    <div class="dropdown-wrapper">
+                                        <a href="privileges.html" class="nav-link font-serif">
+                                            <span class="font-prata">Privileges</span>
+                                        </a>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a href="schedule.html" class="nav-link font-serif">
+                                        <span class="font-prata">Schedules</span>
                                     </a>
                                 </li>
                             </ul>
                         </div>
                         <hr class="ml-4" />
-                        <a href="https://www.trueclassbooking.com.tw/member/login.aspx" target="_blank" class="login">
+                        <a href="https://trueclassbooking.com.sg/member/login.aspx" target="_blank" class="login">
                             <img src="assets/images/icons/icon-people.svg" alt="" />
                         </a>
                     </nav>
@@ -155,111 +116,60 @@
                                     <ul class="nav-list">
                                         <li>
                                             <div class="link-label font-serif">01&nbsp;/</div>
-                                            <button
-                                                type="button"
-                                                class="stepButton nav-link font-serif"
-                                                data-target="about-group"
-                                            >
-                                                <span>關於TRUE集團</span>
-                                                <span class="font-prata">TRUE Group</span>
-                                            </button>
-                                        </li>
-                                        <li>
-                                            <div class="link-label font-serif">02&nbsp;/</div>
                                             <a href="clubs.html" class="nav-link font-serif">
-                                                <span>會館介紹</span>
                                                 <span class="font-prata">Clubs</span>
                                             </a>
                                         </li>
                                         <li>
-                                            <div class="link-label font-serif">03&nbsp;/</div>
-                                            <button
-                                                type="button"
-                                                class="nav-link stepButton font-serif"
-                                                data-target="classes-group"
-                                            >
-                                                <span>團體課程</span>
+                                            <div class="link-label font-serif">02&nbsp;/</div>
+                                            <button type="button" class="nav-link stepButton font-serif" data-target="classes-group">
                                                 <span class="font-prata">Classes</span>
                                             </button>
                                         </li>
                                         <li>
-                                            <div class="link-label font-serif">04&nbsp;/</div>
-                                            <button
-                                                type="button"
-                                                class="nav-link stepButton font-serif"
-                                                data-target="trainers-group"
-                                            >
-                                                <span>私人教練</span>
-                                                <span class="font-prata">Trainers</span>
+                                            <div class="link-label font-serif">03&nbsp;/</div>
+                                            <button type="button" class="nav-link stepButton font-serif" data-target="trainers-group">
+                                                <span class="font-prata">Personal Training</span>
                                             </button>
                                         </li>
                                         <li>
-                                            <div class="link-label font-serif">05&nbsp;/</div>
+                                            <div class="link-label font-serif">04&nbsp;/</div>
                                             <a href="fitness-info.html" class="nav-link font-serif">
-                                                <span>健身101</span>
-                                                <span class="font-prata">Fitness Info</span>
+                                                <span class="font-prata">Fitness 101</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <div class="link-label font-serif">05&nbsp;/</div>
+                                            <a href="updates.html" class="nav-link font-serif">
+                                                <span class="font-prata">Updates</span>
                                             </a>
                                         </li>
                                         <li>
                                             <div class="link-label font-serif">06&nbsp;/</div>
-                                            <button
-                                                type="button"
-                                                class="nav-link stepButton font-serif"
-                                                data-target="news-group"
-                                            >
-                                                <span>消息總覽</span>
-                                                <span class="font-prata">News</span>
-                                            </button>
+                                            <a href="privileges.html" class="nav-link font-serif">
+                                                <span class="font-prata">Privileges</span>
+                                            </a>
                                         </li>
                                         <li class="flex flex-no-wrap">
                                             <div class="link-label font-serif">07&nbsp;/</div>
                                             <a href="schedule.html" class="nav-link font-serif">
-                                                <span>課程表</span>
                                                 <span class="font-prata">Schedule</span>
                                             </a>
                                         </li>
                                         <li class="flex flex-no-wrap">
                                             <div class="link-label font-serif">08&nbsp;/</div>
-                                            <a href="schedule.html" class="nav-link font-serif">
-                                                <span>會員登入</span>
+                                            <a href="https://trueclassbooking.com.sg/member/login.aspx" target="_blank" class="nav-link font-serif">
                                                 <span class="font-prata">Sign In</span>
                                             </a>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="subNav stepper-inner">
-                                    <!--01:關於TRUE集團-->
-                                    <div class="nav-group about-group active">
-                                        <div>
-                                            <div class="link-label font-serif">01&nbsp;/</div>
-                                            <div class="nav-link font-serif">
-                                                <span>關於TRUE集團</span>
-                                                <span class="font-prata">TRUE Group</span>
-                                            </div>
-                                        </div>
-                                        <div class="flex justify-center">
-                                            <ul class="nav-list">
-                                                <li>
-                                                    <a href="about.html#History" class="nav-link font-serif">
-                                                        <span>TRUE Group 歷史</span>
-                                                        <span class="font-prata">TRUE Group History</span>
-                                                    </a>
-                                                </li>
-                                                <li class="flex flex-no-wrap">
-                                                    <a href="about.html#BusinessProgram" class="nav-link font-serif">
-                                                        <span>團體企業方案</span>
-                                                        <span class="font-prata">Business Program</span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
                                     <!--03:團體課程-->
                                     <div class="nav-group classes-group">
                                         <div>
                                             <div class="link-label font-serif">03&nbsp;/</div>
                                             <div class="nav-link font-serif">
-                                                <span>團體課程</span>
                                                 <span class="font-prata">Classes</span>
                                             </div>
                                         </div>
@@ -267,22 +177,16 @@
                                             <ul class="nav-list">
                                                 <li>
                                                     <a href="classes.html#Benefits" class="nav-link font-serif">
-                                                        <span>團體課程好處</span>
                                                         <span class="font-prata">Benefits</span>
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a
-                                                        href="classes.html#ClassIntroduction"
-                                                        class="nav-link font-serif"
-                                                    >
-                                                        <span>課程介紹</span>
+                                                    <a href="classes.html#ClassIntroduction" class="nav-link font-serif">
                                                         <span class="font-prata">Classes Introduction</span>
                                                     </a>
                                                 </li>
                                                 <li class="flex flex-no-wrap">
                                                     <a href="classes.html#Instructors" class="nav-link font-serif">
-                                                        <span>師資陣容</span>
                                                         <span class="font-prata">Instructors</span>
                                                     </a>
                                                 </li>
@@ -294,7 +198,6 @@
                                         <div>
                                             <div class="link-label font-serif">04&nbsp;/</div>
                                             <div class="nav-link font-serif">
-                                                <span>私人教練</span>
                                                 <span class="font-prata">Trainers</span>
                                             </div>
                                         </div>
@@ -302,55 +205,17 @@
                                             <ul class="nav-list">
                                                 <li>
                                                     <a href="trainers.html#Benefits" class="nav-link font-serif">
-                                                        <span>一對一課程好處</span>
                                                         <span class="font-prata">Benefits</span>
                                                     </a>
                                                 </li>
                                                 <li>
-                                                    <a
-                                                        href="trainers.html#ClassesIntroduction"
-                                                        class="nav-link font-serif"
-                                                    >
-                                                        <span>課程介紹</span>
+                                                    <a href="trainers.html#ClassesIntroduction" class="nav-link font-serif">
                                                         <span class="font-prata">Classes Introduction</span>
                                                     </a>
                                                 </li>
                                                 <li class="flex flex-no-wrap">
                                                     <a href="trainers.html#Trainers" class="nav-link font-serif">
-                                                        <span>教練陣容</span>
                                                         <span class="font-prata">Trainers</span>
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!--06:消息總覽-->
-                                    <div class="nav-group news-group">
-                                        <div>
-                                            <div class="link-label font-serif">06&nbsp;/</div>
-                                            <div class="nav-link font-serif">
-                                                <span>消息總覽</span>
-                                                <span class="font-prata">News</span>
-                                            </div>
-                                        </div>
-                                        <div class="flex justify-center">
-                                            <ul class="nav-list">
-                                                <li>
-                                                    <a href="announcement.html" class="nav-link font-serif">
-                                                        <span>最新公告</span>
-                                                        <span class="font-prata">Announcement</span>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="news.html" class="nav-link font-serif">
-                                                        <span>熱門活動</span>
-                                                        <span class="font-prata">Event</span>
-                                                    </a>
-                                                </li>
-                                                <li>
-                                                    <a href="member-special.html" class="nav-link font-serif">
-                                                        <span>會員優惠</span>
-                                                        <span class="font-prata">Membership Discount</span>
                                                     </a>
                                                 </li>
                                             </ul>
@@ -393,8 +258,7 @@
                         </div>
                         <div class="section-info">
                             <div class="container max-1100">
-                                <h2 class="page-title font-prata fitness-text text-secondary">Asia World</h2>
-                                <h4 class="page-caption fitness-text text-secondary">微風南京館</h4>
+                                <h2 class="page-title font-prata fitness-text text-secondary">Income @Tampines Junction</h2>
                             </div>
                         </div>
                     </div>
@@ -402,11 +266,9 @@
                     <div class="breadcrumb-container justify-end">
                         <div class="container max-1280">
                             <ul class="breadcrumb">
-                                <li><a href="index.html">首頁</a></li>
-                                <li><a href="clubs.html">會館介紹</a></li>
-                                <li>
-                                    <a href="club-detail.html" class="active">微風南京館</a>
-                                </li>
+                                <li><a href="index.html">Home</a></li>
+                                <li><a href="clubs.html">Clubs</a></li>
+                                <li><a href="club-detail.html" class="active">Income @Tampines Junction</a></li>
                             </ul>
                         </div>
                     </div>
@@ -447,21 +309,12 @@
                             <div class="row">
                                 <div class="col s12 l6">
                                     <!--如果沒有gallery照片，按鈕class請加上：disabled-->
-                                    <a
-                                        href="#galleryModal"
-                                        class="modal-trigger cover-link cover-rounded fitness rounded-full"
-                                    >
+                                    <a href="#galleryModal" class="modal-trigger cover-link cover-rounded fitness rounded-full">
                                         <div class="effect">
                                             <figure class="zoom-effect ratio-square">
-                                                <img
-                                                    src="assets/images/sample/club-cover-sample2.jpg"
-                                                    alt=""
-                                                    class="img-cover"
-                                                />
+                                                <img src="assets/images/sample/club-cover-sample2.jpg" alt="" class="img-cover" />
                                             </figure>
-                                            <i class="icon"
-                                                ><img src="assets/images/icons/icon-search-white.svg" alt=""
-                                            /></i>
+                                            <i class="icon"><img src="assets/images/icons/icon-search-white.svg" alt="" /></i>
                                         </div>
                                     </a>
                                     <!--Modal-->
@@ -471,56 +324,32 @@
                                                 <div class="swiper-wrapper">
                                                     <div class="swiper-slide">
                                                         <figure class="ratio-item-cover">
-                                                            <img
-                                                                src="assets/images/sample/course-sample.jpg"
-                                                                alt=""
-                                                                class="img-cover"
-                                                            />
+                                                            <img src="assets/images/sample/course-sample.jpg" alt="" class="img-cover" />
                                                         </figure>
                                                     </div>
                                                     <div class="swiper-slide">
                                                         <figure class="ratio-item-cover">
-                                                            <img
-                                                                src="assets/images/sample/course-sample.jpg"
-                                                                alt=""
-                                                                class="img-cover"
-                                                            />
+                                                            <img src="assets/images/sample/course-sample.jpg" alt="" class="img-cover" />
                                                         </figure>
                                                     </div>
                                                     <div class="swiper-slide">
                                                         <figure class="ratio-item-cover">
-                                                            <img
-                                                                src="assets/images/sample/course-sample.jpg"
-                                                                alt=""
-                                                                class="img-cover"
-                                                            />
+                                                            <img src="assets/images/sample/course-sample.jpg" alt="" class="img-cover" />
                                                         </figure>
                                                     </div>
                                                     <div class="swiper-slide">
                                                         <figure class="ratio-item-cover">
-                                                            <img
-                                                                src="assets/images/sample/course-sample.jpg"
-                                                                alt=""
-                                                                class="img-cover"
-                                                            />
+                                                            <img src="assets/images/sample/course-sample.jpg" alt="" class="img-cover" />
                                                         </figure>
                                                     </div>
                                                     <div class="swiper-slide">
                                                         <figure class="ratio-item-cover">
-                                                            <img
-                                                                src="assets/images/sample/course-sample.jpg"
-                                                                alt=""
-                                                                class="img-cover"
-                                                            />
+                                                            <img src="assets/images/sample/course-sample.jpg" alt="" class="img-cover" />
                                                         </figure>
                                                     </div>
                                                     <div class="swiper-slide">
                                                         <figure class="ratio-item-cover">
-                                                            <img
-                                                                src="assets/images/sample/course-sample.jpg"
-                                                                alt=""
-                                                                class="img-cover"
-                                                            />
+                                                            <img src="assets/images/sample/course-sample.jpg" alt="" class="img-cover" />
                                                         </figure>
                                                     </div>
                                                 </div>
@@ -535,65 +364,37 @@
                                                 <div class="swiper-wrapper">
                                                     <div class="swiper-slide">
                                                         <figure class="ratio-item-cover">
-                                                            <img
-                                                                src="assets/images/sample/club-cover-sample2.jpg"
-                                                                alt=""
-                                                                class="img-cover"
-                                                            />
+                                                            <img src="assets/images/sample/club-cover-sample2.jpg" alt="" class="img-cover" />
                                                         </figure>
                                                     </div>
                                                     <div class="swiper-slide">
                                                         <figure class="ratio-item-cover">
-                                                            <img
-                                                                src="assets/images/sample/club-cover-sample2.jpg"
-                                                                alt=""
-                                                                class="img-cover"
-                                                            />
+                                                            <img src="assets/images/sample/club-cover-sample2.jpg" alt="" class="img-cover" />
                                                         </figure>
                                                     </div>
                                                     <div class="swiper-slide">
                                                         <figure class="ratio-item-cover">
-                                                            <img
-                                                                src="assets/images/sample/club-cover-sample2.jpg"
-                                                                alt=""
-                                                                class="img-cover"
-                                                            />
+                                                            <img src="assets/images/sample/club-cover-sample2.jpg" alt="" class="img-cover" />
                                                         </figure>
                                                     </div>
                                                     <div class="swiper-slide">
                                                         <figure class="ratio-item-cover">
-                                                            <img
-                                                                src="assets/images/sample/club-cover-sample2.jpg"
-                                                                alt=""
-                                                                class="img-cover"
-                                                            />
+                                                            <img src="assets/images/sample/club-cover-sample2.jpg" alt="" class="img-cover" />
                                                         </figure>
                                                     </div>
                                                     <div class="swiper-slide">
                                                         <figure class="ratio-item-cover">
-                                                            <img
-                                                                src="assets/images/sample/club-cover-sample2.jpg"
-                                                                alt=""
-                                                                class="img-cover"
-                                                            />
+                                                            <img src="assets/images/sample/club-cover-sample2.jpg" alt="" class="img-cover" />
                                                         </figure>
                                                     </div>
                                                     <div class="swiper-slide">
                                                         <figure class="ratio-item-cover">
-                                                            <img
-                                                                src="assets/images/sample/club-cover-sample2.jpg"
-                                                                alt=""
-                                                                class="img-cover"
-                                                            />
+                                                            <img src="assets/images/sample/club-cover-sample2.jpg" alt="" class="img-cover" />
                                                         </figure>
                                                     </div>
                                                     <div class="swiper-slide">
                                                         <figure class="ratio-item-cover">
-                                                            <img
-                                                                src="assets/images/sample/club-cover-sample2.jpg"
-                                                                alt=""
-                                                                class="img-cover"
-                                                            />
+                                                            <img src="assets/images/sample/club-cover-sample2.jpg" alt="" class="img-cover" />
                                                         </figure>
                                                     </div>
                                                 </div>
@@ -605,8 +406,7 @@
                                     <div class="section-info">
                                         <h3 class="section-title font-prata text-yellow">About</h3>
                                         <p class="section-desc line-height-2">
-                                            位於時尚、娛樂、美食的微風南京百貨內，為您打造專屬的健康運動新概念佔地超過1200
-                                            坪，每週提供超過400堂、100
+                                            位於時尚、娛樂、美食的微風南京百貨內，為您打造專屬的健康運動新概念佔地超過1200 坪，每週提供超過400堂、100
                                             種以上各式有氧及飛輪團體課程選擇，特別打造Kimiko老師專屬的TRUE Love
                                             Kimiko教室，每週親臨授課以自創獨家的Kimiko系統運動帶大家從運動中找回日常美態。
                                         </p>
@@ -626,23 +426,15 @@
                                             </div>
                                             <div class="address-item">
                                                 <i class="icon icon-clock"></i>
-                                                <p>
-                                                    週一到週五 : 6:30 am - 11:00 pm<br />週末 / 國定假日 : 7:30 am –
-                                                    10:00 pm
-                                                </p>
+                                                <p>週一到週五 : 6:30 am - 11:00 pm<br />週末 / 國定假日 : 7:30 am – 10:00 pm</p>
                                             </div>
                                         </address>
                                         <hr class="yellow" />
                                         <div class="download">
-                                            <a
-                                                href="#"
-                                                target="_blank"
-                                                rel="noreferrer noopener"
-                                                class="border-link border-rb"
-                                            >
+                                            <a href="#" target="_blank" rel="noreferrer noopener" class="border-link border-rb">
                                                 <div class="link-inner">
                                                     <i class="icon icon-download"></i>
-                                                    <span>Download Courses Schedule<br /><span>下載課程表</span></span>
+                                                    <span>Download Courses Schedule</span>
                                                 </div>
                                             </a>
                                         </div>
@@ -659,57 +451,38 @@
                         <div class="section-info title-container">
                             <h3 class="section-title font-prata text-yellow">
                                 Trainers &
-                                <br class="hide-on-small-only" />Programmers
+                                <br class="hide-on-small-only" />Programmes
                             </h3>
-                            <h5 class="section-caption font-size-h5 text-yellow">關於師資及課程</h5>
                         </div>
                         <div class="item-container">
                             <div class="item-list row">
                                 <div class="col s12 m6">
-                                    <a
-                                        href="classes.html#Instructors"
-                                        class="list-item cover-link cover-rounded fitness"
-                                    >
+                                    <a href="classes.html#Instructors" class="list-item cover-link cover-rounded fitness">
                                         <div class="item-cover effect">
                                             <figure class="zoom-effect ratio-square">
-                                                <img
-                                                    src="assets/images/sample/club-instructors.jpg"
-                                                    alt=""
-                                                    class="img-cover"
-                                                />
+                                                <img src="assets/images/sample/club-instructors.jpg" alt="" class="img-cover" />
                                             </figure>
                                         </div>
                                         <div class="item-info">
                                             <p class="item-title font-size-body-2">
-                                                <span class="underline font-medium">專業團體課程師資</span>
+                                                <span class="underline font-medium">Professional class trainer</span>
                                             </p>
-                                            <p class="item-desc line-height-2">
-                                                健身、瑜珈、飛輪、有氧、舞蹈及拳擊全方位訓練的運動選擇
-                                            </p>
+                                            <p class="item-desc line-height-2">健身、瑜珈、飛輪、有氧、舞蹈及拳擊全方位訓練的運動選擇</p>
                                         </div>
                                     </a>
                                 </div>
                                 <div class="col s12 m6">
-                                    <a
-                                        href="classes.html#ClassIntroduction"
-                                        class="list-item cover-link cover-rounded fitness"
-                                    >
+                                    <a href="classes.html#ClassIntroduction" class="list-item cover-link cover-rounded fitness">
                                         <div class="item-cover effect">
                                             <figure class="zoom-effect ratio-square">
-                                                <img
-                                                    src="assets/images/sample/club-group-classes.jpg"
-                                                    alt=""
-                                                    class="img-cover"
-                                                />
+                                                <img src="assets/images/sample/club-group-classes.jpg" alt="" class="img-cover" />
                                             </figure>
                                         </div>
                                         <div class="item-info">
                                             <p class="item-title font-size-body-2">
-                                                <span class="underline font-medium">多元課程</span>
+                                                <span class="underline font-medium">Diverse class</span>
                                             </p>
-                                            <p class="item-desc line-height-2">
-                                                擁有各類健身、瑜珈證照，多年執業經歷，協助上千位學員達成目標
-                                            </p>
+                                            <p class="item-desc line-height-2">擁有各類健身、瑜珈證照，多年執業經歷，協助上千位學員達成目標</p>
                                         </div>
                                     </a>
                                 </div>
@@ -717,44 +490,29 @@
                                     <a href="trainers.html#Trainers" class="list-item cover-link cover-rounded fitness">
                                         <div class="item-cover effect">
                                             <figure class="zoom-effect ratio-square">
-                                                <img
-                                                    src="assets/images/sample/club-trainers.jpg"
-                                                    alt=""
-                                                    class="img-cover"
-                                                />
+                                                <img src="assets/images/sample/club-trainers.jpg" alt="" class="img-cover" />
                                             </figure>
                                         </div>
                                         <div class="item-info">
                                             <p class="item-title font-size-body-2">
-                                                <span class="underline font-medium">私人教練團隊</span>
+                                                <span class="underline font-medium">Personal trainings</span>
                                             </p>
-                                            <p class="item-desc line-height-2">
-                                                擁有各類健身、瑜珈證照，多年執業經歷，協助上千位學員達成目標
-                                            </p>
+                                            <p class="item-desc line-height-2">擁有各類健身、瑜珈證照，多年執業經歷，協助上千位學員達成目標</p>
                                         </div>
                                     </a>
                                 </div>
                                 <div class="col s12 m6">
-                                    <a
-                                        href="trainers.html#ClassesIntroduction"
-                                        class="list-item cover-link cover-rounded fitness"
-                                    >
+                                    <a href="trainers.html#ClassesIntroduction" class="list-item cover-link cover-rounded fitness">
                                         <div class="item-cover effect">
                                             <figure class="zoom-effect ratio-square">
-                                                <img
-                                                    src="assets/images/sample/club-fitness-classes.jpg"
-                                                    alt=""
-                                                    class="img-cover"
-                                                />
+                                                <img src="assets/images/sample/club-fitness-classes.jpg" alt="" class="img-cover" />
                                             </figure>
                                         </div>
                                         <div class="item-info">
                                             <p class="item-title font-size-body-2">
-                                                <span class="underline font-medium">客製化訓練</span>
+                                                <span class="underline font-medium">Customised training</span>
                                             </p>
-                                            <p class="item-desc line-height-2">
-                                                健身、瑜珈、飛輪、有氧、舞蹈及拳擊全方位訓練的運動選擇
-                                            </p>
+                                            <p class="item-desc line-height-2">健身、瑜珈、飛輪、有氧、舞蹈及拳擊全方位訓練的運動選擇</p>
                                         </div>
                                     </a>
                                 </div>
@@ -767,17 +525,13 @@
                 <section class="equipment-section section px">
                     <div class="container max-800">
                         <div class="section-info title-container">
-                            <h3 class="section-title font-prata text-yellow">
-                                Facilities &
-                                <br class="hide-on-small-only" />Equipment
-                            </h3>
-                            <h5 class="section-caption text-yellow">運動設施</h5>
+                            <h3 class="section-title font-prata text-yellow">Facilities</h3>
                         </div>
                         <table>
                             <tbody>
                                 <tr>
                                     <td>
-                                        <p class="font-size-body-2">專屬教室</p>
+                                        <p class="font-size-body-2">Studios</p>
                                     </td>
                                     <td>
                                         <p>瑜珈教室 x 2．熱瑜珈教室 x 1．有氧舞蹈教室 x 3．飛輪教室 x 1</p>
@@ -785,17 +539,15 @@
                                 </tr>
                                 <tr>
                                     <td>
-                                        <p class="font-size-body-2">健身設施</p>
+                                        <p class="font-size-body-2">Gym facilities</p>
                                     </td>
                                     <td>
-                                        <p>
-                                            Queenax<sup>™</sup>及多功能組合訓練區、各式強度及阻力型訓練器材、多樣化心肺訓練器材、專業重量訓練器材
-                                        </p>
+                                        <p>Queenax<sup>™</sup>及多功能組合訓練區、各式強度及阻力型訓練器材、多樣化心肺訓練器材、專業重量訓練器材</p>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>
-                                        <p class="font-size-body-2">更衣室設施</p>
+                                        <p class="font-size-body-2">Locker Room Amenities</p>
                                     </td>
                                     <td>
                                         <p>女置物衣櫃區、男置物衣櫃區</p>
@@ -826,7 +578,7 @@
                 <section class="news-section section">
                     <div class="container max-1280">
                         <div class="section-info">
-                            <h3 class="section-title font-prata text-yellow">news</h3>
+                            <h3 class="section-title font-prata text-yellow">Updates</h3>
                         </div>
                         <div class="slider-container">
                             <div class="newsSlider swiper-container">
@@ -835,15 +587,11 @@
                                         <a href="#" class="slider-item cover-link fitness">
                                             <div class="effect">
                                                 <figure class="zoom-effect ratio-slider-news">
-                                                    <img
-                                                        src="assets/images/sample/news-sample.jpg"
-                                                        alt=""
-                                                        class="img-cover"
-                                                    />
+                                                    <img src="assets/images/sample/news-sample.jpg" alt="" class="img-cover" />
                                                 </figure>
                                                 <div class="item-info">
                                                     <p class="info-location">News / Asia World</p>
-                                                    <p class="info-desc font-size-body-2">微風南京館 週年慶滿萬送百</p>
+                                                    <p class="info-desc font-size-body-2">週年慶滿萬送百</p>
                                                     <p class="info-date">2020 12 22</p>
                                                 </div>
                                             </div>
@@ -853,15 +601,11 @@
                                         <a href="#" class="slider-item cover-link fitness">
                                             <div class="effect">
                                                 <figure class="zoom-effect ratio-slider-news">
-                                                    <img
-                                                        src="assets/images/sample/news-sample.jpg"
-                                                        alt=""
-                                                        class="img-cover"
-                                                    />
+                                                    <img src="assets/images/sample/news-sample.jpg" alt="" class="img-cover" />
                                                 </figure>
                                                 <div class="item-info">
                                                     <p class="info-location">News / Asia World</p>
-                                                    <p class="info-desc font-size-body-2">微風南京館 週年慶滿萬送百</p>
+                                                    <p class="info-desc font-size-body-2">週年慶滿萬送百</p>
                                                     <p class="info-date">2020 12 22</p>
                                                 </div>
                                             </div>
@@ -871,15 +615,11 @@
                                         <a href="#" class="slider-item cover-link fitness">
                                             <div class="effect">
                                                 <figure class="zoom-effect ratio-slider-news">
-                                                    <img
-                                                        src="assets/images/sample/news-sample.jpg"
-                                                        alt=""
-                                                        class="img-cover"
-                                                    />
+                                                    <img src="assets/images/sample/news-sample.jpg" alt="" class="img-cover" />
                                                 </figure>
                                                 <div class="item-info">
                                                     <p class="info-location">News / Asia World</p>
-                                                    <p class="info-desc font-size-body-2">微風南京館 週年慶滿萬送百</p>
+                                                    <p class="info-desc font-size-body-2">週年慶滿萬送百</p>
                                                     <p class="info-date">2020 12 22</p>
                                                 </div>
                                             </div>
@@ -889,15 +629,11 @@
                                         <a href="#" class="slider-item cover-link fitness">
                                             <div class="effect">
                                                 <figure class="zoom-effect ratio-slider-news">
-                                                    <img
-                                                        src="assets/images/sample/news-sample.jpg"
-                                                        alt=""
-                                                        class="img-cover"
-                                                    />
+                                                    <img src="assets/images/sample/news-sample.jpg" alt="" class="img-cover" />
                                                 </figure>
                                                 <div class="item-info">
                                                     <p class="info-location">News / Asia World</p>
-                                                    <p class="info-desc font-size-body-2">微風南京館 週年慶滿萬送百</p>
+                                                    <p class="info-desc font-size-body-2">週年慶滿萬送百</p>
                                                     <p class="info-date">2020 12 22</p>
                                                 </div>
                                             </div>
@@ -907,15 +643,11 @@
                                         <a href="#" class="slider-item cover-link fitness">
                                             <div class="effect">
                                                 <figure class="zoom-effect ratio-slider-news">
-                                                    <img
-                                                        src="assets/images/sample/news-sample.jpg"
-                                                        alt=""
-                                                        class="img-cover"
-                                                    />
+                                                    <img src="assets/images/sample/news-sample.jpg" alt="" class="img-cover" />
                                                 </figure>
                                                 <div class="item-info">
                                                     <p class="info-location">News / Asia World</p>
-                                                    <p class="info-desc font-size-body-2">微風南京館 週年慶滿萬送百</p>
+                                                    <p class="info-desc font-size-body-2">週年慶滿萬送百</p>
                                                     <p class="info-date">2020 12 22</p>
                                                 </div>
                                             </div>
@@ -939,54 +671,34 @@
                         <div class="row">
                             <div class="col s12">
                                 <div class="section-info">
-                                    <h3 class="section-title font-prata yoga-text text-secondary">
-                                        Free
-                                        <br class="hide-on-med-and-down" />Trial
-                                    </h3>
-                                    <h5 class="section-caption yoga-text text-secondary">免費體驗</h5>
+                                    <h3 class="section-title font-prata yoga-text text-secondary">Free Trial</h3>
                                 </div>
                             </div>
                             <div class="col s12 flex-grow">
                                 <form action="#" autocomplete="off" class="form">
                                     <div class="input-container">
-                                        <label for="name"> Name<br /><span>姓名</span> </label>
+                                        <label for="name"> Name<br /> </label>
                                         <div class="input-field">
-                                            <input
-                                                required
-                                                id="name"
-                                                type="text"
-                                                placeholder="Full Name"
-                                                class="validate bg-white"
-                                            />
-                                            <span class="helper-text" data-error="錯誤文字"></span>
+                                            <input required id="name" type="text" placeholder="Full Name" class="validate bg-white" />
+                                            <span class="helper-text" data-error="Please provide full name"></span>
                                         </div>
                                     </div>
                                     <div class="input-container">
-                                        <label for="email"> Email<br /><span>電子信箱</span> </label>
+                                        <label for="email"> Email<br /> </label>
                                         <div class="input-field">
-                                            <input
-                                                id="email"
-                                                type="email"
-                                                placeholder="trueyogafitness@org.com"
-                                                class="validate bg-white"
-                                            />
-                                            <span class="helper-text" data-error="錯誤文字"></span>
+                                            <input id="email" type="email" placeholder="name@truefitness.com.sg" class="validate bg-white" />
+                                            <span class="helper-text" data-error="Please provide your Email address"></span>
                                         </div>
                                     </div>
                                     <div class="input-container">
-                                        <label for="tel"> Phone<br /><span>聯絡電話</span> </label>
+                                        <label for="tel"> Phone<br /> </label>
                                         <div class="input-field">
-                                            <input
-                                                id="tel"
-                                                type="tel"
-                                                placeholder="0912-345-678"
-                                                class="validate bg-white"
-                                            />
-                                            <span class="helper-text" data-error="錯誤文字"></span>
+                                            <input id="tel" type="tel" placeholder="+65 1234 5678" class="validate bg-white" />
+                                            <span class="helper-text" data-error="Please provide contact number"></span>
                                         </div>
                                     </div>
                                     <div class="input-container">
-                                        <label for="clubs">Club<br /><span>分店選擇</span></label>
+                                        <label for="clubs"> Club<br /> </label>
                                         <div class="custom-select input-field">
                                             <select id="clubs" class="browser-default bg-white">
                                                 <option value="1">Option 1</option>
@@ -996,7 +708,7 @@
                                         </div>
                                     </div>
                                     <div class="input-container">
-                                        <label for="category"> Category<br /><span>體驗項目</span> </label>
+                                        <label for="category"> Category<br /> </label>
                                         <div class="custom-select input-field">
                                             <select id="category" class="browser-default bg-white">
                                                 <option value="1">Option 1</option>
@@ -1005,16 +717,24 @@
                                             </select>
                                         </div>
                                     </div>
+                                    <div class="terms text-center">
+                                        <div class="terms-title">TERMS AND CONDITIONS</div>
+                                        <div class="terms-desc">
+                                            By submitting this form I agree to the data
+                                            <a href="privacy.html">privacy policy</a> and that by submitting my details, True Fitness may contact me via phone,
+                                            text message and/or emails.
+                                        </div>
+                                    </div>
+                                    <!--Google reCaptcha v2-->
+                                    <div class="recaptcha-container">
+                                        <div class="g-recaptcha" data-sitekey="6Lew-DwaAAAAAJUYU88j8EQ3Li56bwVDpBm532ya"></div>
+                                    </div>
                                     <div class="form-buttons">
                                         <button class="btn waves-effect waves-light grey" type="reset" name="action">
-                                            <span>Clear 清除</span>
+                                            <span>Clear</span>
                                         </button>
-                                        <button
-                                            class="btn waves-effect waves-light yoga primary"
-                                            type="submit"
-                                            name="action"
-                                        >
-                                            <span>Send 送出</span>
+                                        <button class="btn waves-effect waves-light yoga primary" type="submit" name="action">
+                                            <span>Send</span>
                                         </button>
                                     </div>
                                 </form>
@@ -1027,7 +747,7 @@
             <footer id="footer" class="footer">
                 <div class="container max-1280">
                     <!--Navigation-->
-                    <div class="container max-800">
+                    <div class="container max-1100">
                         <nav>
                             <div class="row">
                                 <div class="col">
@@ -1037,24 +757,28 @@
                                     <div class="collapse">
                                         <div class="collapse-inner">
                                             <div>
-                                                <a href="about.html" class="nav-link">關於集團</a>
-                                                <a href="clubs.html" class="nav-link">會館介紹</a>
+                                                <a href="about.html" class="nav-link">About Us</a>
+                                                <a href="clubs.html" class="nav-link">Clubs</a>
                                             </div>
                                             <div>
-                                                <a href="classes.html" class="nav-link">團體課程</a>
-                                                <a href="trainers.html" class="nav-link">私人教練</a>
-                                                <a href="schedule.html" class="nav-link">課程表</a>
+                                                <a href="classes.html" class="nav-link">Classes</a>
+                                                <a href="trainers.html" class="nav-link">Personal Training</a>
+                                                <a href="schedule.html" class="nav-link">Schedules</a>
                                             </div>
                                             <div>
-                                                <a href="news.html" class="nav-link">消息總覽</a>
-                                                <a href="fitness-info.html" class="nav-link">健身101</a>
-                                                <a href="member-special.html" class="nav-link">特約商優惠</a>
-                                                <a href="about.html#BusinessProgram" class="nav-link">企業團體方案</a>
+                                                <a href="updates.html" class="nav-link">Updates</a>
+                                                <a href="fitness-info.html" class="nav-link">Fitness 101</a>
                                             </div>
                                             <div>
-                                                <a href="faq.html" class="nav-link">常見問題</a>
-                                                <a href="contact.html" class="nav-link">聯絡我們</a>
-                                                <a href="global-location.html" class="nav-link">全球據點</a>
+                                                <a href="privileges.html" class="nav-link">Privileges</a>
+                                                <a href="about.html#BusinessProgram" class="nav-link">Corporate Wellness</a>
+                                                <a href="global-location.html" class="nav-link">Global Location</a>
+                                            </div>
+                                            <div>
+                                                <a href="faq.html" class="nav-link">Q&A</a>
+                                                <a href="contact.html" class="nav-link">Contact Us</a>
+                                                <a href="privacy.html" class="nav-link">Privacy Policy</a>
+                                                <a href="#" class="nav-link">COVID-19 updates in club measures</a>
                                             </div>
                                         </div>
                                     </div>
@@ -1067,26 +791,13 @@
                                         <div class="collapse-inner">
                                             <div>
                                                 <a
-                                                    href="https://member.trueyoga.com.tw/deposit.html"
+                                                    href="https://trueclassbooking.com.sg/member/login.aspx"
                                                     target="_blank"
                                                     rel="noreferrer noopener"
                                                     class="nav-link"
-                                                    >信託查詢</a
                                                 >
-                                                <a
-                                                    href="career.html"
-                                                    target="_blank"
-                                                    rel="noreferrer noopener"
-                                                    class="nav-link"
-                                                    >徵才消息</a
-                                                >
-                                                <a
-                                                    href="https://www.trueclassbooking.com.tw/member/login.aspx"
-                                                    target="_blank"
-                                                    rel="noreferrer noopener"
-                                                    class="nav-link"
-                                                    >會員登入</a
-                                                >
+                                                    Log In
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
@@ -1099,17 +810,8 @@
                             <div class="logo-list">
                                 <ul class="row">
                                     <li class="col">
-                                        <a href="./index.html">
-                                            <img src="assets/images/logos/true-yoga-fitness.png" alt="" />
-                                        </a>
-                                    </li>
-                                    <li class="col">
-                                        <a
-                                            href="https://www.yogaedition.com.tw/"
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                        >
-                                            <img src="assets/images/logos/true-yoga-edition.png" alt="" />
+                                        <a href="https://www.tfx.sg/">
+                                            <img src="assets/images/logos/tfx-logo.png" alt="" />
                                         </a>
                                     </li>
                                 </ul>
@@ -1118,7 +820,7 @@
                             <ul class="social-list">
                                 <li>
                                     <a
-                                        href="https://www.facebook.com/TrueYogaFitness.Taiwan/"
+                                        href="https://www.facebook.com/truefitness.sg"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         class="social-link"
@@ -1128,7 +830,7 @@
                                 </li>
                                 <li>
                                     <a
-                                        href="https://www.instagram.com/trueyogafitness_tw/"
+                                        href="https://www.instagram.com/truefitness.sg/"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         class="social-link"
@@ -1138,7 +840,7 @@
                                 </li>
                                 <li>
                                     <a
-                                        href="https://www.youtube.com/channel/UCl9iURq7EfAcddkutZY4xEw"
+                                        href="https://www.youtube.com/user/TrueFitnessVideo"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         class="social-link"
@@ -1149,9 +851,7 @@
                             </ul>
                         </div>
                         <!--Copyright-->
-                        <div class="copyright">
-                            &copy;<span class="year">2020</span> True Yoga Fitness. All Rights Reserved.
-                        </div>
+                        <div class="copyright">&copy;<span class="year">2020</span> True Fitness Pte Ltd.</div>
                     </div>
                     <!--Back to top-->
                     <button type="button" class="topBtn">
@@ -1161,8 +861,8 @@
             </footer>
             <!--Contact CTA-->
             <a href="contact.html" class="contact-cta hide-on-small-only">
-                <img src="assets/images/graphics/cta.svg" alt="" />
+                <img src="assets/images/graphics/cta.png" alt="" />
             </a>
         </div>
-    <script type="text/javascript" src="assets/js/vendors.d1ad5cc8.js"></script><script type="text/javascript" src="assets/js/app.d1ad5cc8.js"></script></body>
+    <script type="text/javascript" src="assets/js/vendors.0f744108.js"></script><script type="text/javascript" src="assets/js/app.0f744108.js"></script></body>
 </html>

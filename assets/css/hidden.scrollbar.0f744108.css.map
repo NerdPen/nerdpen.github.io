@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///hidden.scrollbar.scss"],"names":[],"mappings":"AAAA,UAAU,uBAAuB,CAAC,oBAAoB,CAAC,gDAAgD,YAAY,C","file":"assets/css/hidden.scrollbar.0f744108.css","sourcesContent":["body,html{-ms-overflow-style:none;scrollbar-width:none}body::-webkit-scrollbar,html::-webkit-scrollbar{display:none}\n"],"sourceRoot":""}
