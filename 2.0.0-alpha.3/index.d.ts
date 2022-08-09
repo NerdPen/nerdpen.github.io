@@ -4,8 +4,8 @@ export declare global {
     }
 }
 interface IPaymentSDK {
-    setup: (appId: number | string, appKey: string, serverType: ServerType) => void;
-    card: CreditCard;
+    setupSDK: (appId: number | string, appKey: string, serverType: ServerType) => void;
+    creditCard: CreditCard;
 }
 
 export declare class ApiFrame extends PostMessageEmitter {
@@ -14,11 +14,6 @@ export declare class ApiFrame extends PostMessageEmitter {
 }
 
 
-export declare type ClientData = {
-    appId: number | string;
-    appKey: string;
-    serverType: ServerType;
-};
 export declare class Config extends EventEmitter {
     private static _instance;
     private _origin;
@@ -30,43 +25,43 @@ export declare class Config extends EventEmitter {
     get version(): string;
     get origin(): string;
     get apiDomain(): string;
+    get iframeDomain(): string;
 }
 
 export declare type EventHandler<T extends any> = (args: T) => void;
-export declare type EventBinder<T extends any> = (event: EventHandler<T>) => Listener;
-export declare class Listener {
-    owner: EventEmitter;
-    event: Function;
-    callback: Function;
-    constructor(owner: EventEmitter, event: Function, callback: Function);
-}
 export declare class EventEmitter {
     private listeners;
     constructor();
-    private addListener;
-    protected off(): void;
-    protected off(listener: Listener): void;
-    protected off(event: Function, callback?: Function): void;
-    protected emit<T>(event: EventBinder<T>, payload?: T): void;
-    protected registerEvent<T>(): (handler: EventHandler<T>) => Listener;
+    protected on<T>(event: string, callback: EventHandler<T>): void;
+    protected emit<T>(event: string, payload?: T): void;
+    protected off(event: string): void;
 }
 
 export declare type EventHandler<T extends any> = (args: T) => void;
 export declare class PostMessageEmitter {
+    current: Window;
     target: Window;
     origin: string;
     private listeners;
-    constructor(target: Window, origin: string);
+    constructor(current: Window, target: Window, origin: string);
     protected on<T>(event: string, callback: EventHandler<T>): void;
     emit<T>(event: string, payload?: T): void;
-    protected registerEvent<T>(event: string): (handler: EventHandler<T>) => void;
+    protected registerEvent<T>(event: string): (handler: EventHandler<PostMessage<T>>) => void;
 }
 
 export declare type ServerType = 'sandbox' | 'production';
-export interface IPostMessage<T> {
+export declare type Origin = {
+    [key in ServerType]: string;
+};
+export declare type ClientData = {
+    appId: number | string;
+    appKey: string;
+    serverType: ServerType;
+};
+export declare type PostMessage<T> = {
     type: string;
     payload: T;
-}
+};
 export interface IApiResponse {
     statusCode: string;
     message: string;
@@ -74,16 +69,17 @@ export interface IApiResponse {
 
 interface ICreditCard {
     setup: (config: ICreditCardSetup) => void;
-    getTxnToken: (callback: (result: IGetTxnTokenResponseEntity) => void) => void;
+    getToken: (callback: (result: IGetTxnTokenResponseEntity) => void) => void;
 }
 export declare class CreditCard extends EventEmitter implements ICreditCard {
     private setupConfig;
     private creditCardData;
-    readonly onUpdate: (handler: (args: ICreditCardUpdate) => void) => import("@/src/events/eventEmitter").Listener;
     constructor();
     setup(config: ICreditCardSetup): void;
     private createFields;
-    getTxnToken(callback: (result: IGetTxnTokenResponseEntity) => void): void;
+    private getFieldData;
+    getToken(callback: (result: IGetTxnTokenResponseEntity) => void): void;
+    onUpdate(callback: (result: ICreditCardUpdateData) => void): void;
 }
 
 export declare enum CardBrand {
@@ -107,13 +103,22 @@ export interface ICreditCardSetup {
         [key in Lowercase<keyof typeof FieldStatus>]?: Partial<CSSStyleDeclaration>;
     };
 }
-export interface ICreditCardUpdate {
+export interface ICreditCardData {
     canGetToken: boolean;
     cardBrand: CardBrand;
     fields: {
         [key in FieldsType]?: {
+            target: FieldFrame;
             status: FieldStatus;
             value: string;
+            errorMessage?: string;
+        };
+    };
+}
+export interface ICreditCardUpdateData extends Omit<ICreditCardData, 'fields'> {
+    fields: {
+        [key in FieldsType]?: {
+            status: FieldStatus;
             errorMessage?: string;
         };
     };
@@ -123,9 +128,11 @@ export declare const getCardBrand: (value: string) => CardBrand;
 
 export declare class FieldFrame extends PostMessageEmitter {
     element: HTMLIFrameElement;
-    onUpdate: (handler: (args: IPostMessage<IFieldUpdate>) => void) => void;
-    onUpdateCardBrand: (handler: (args: IPostMessage<CardBrand>) => void) => void;
     constructor(element: HTMLIFrameElement);
+    private syncClientData;
+    onUpdate(callback: (result: IFieldUpdate) => void): void;
+    onUpdateCardBrand(callback: (result: CardBrand) => void): void;
+    onGetTokenCompleted(callback: (result: IGetTxnTokenResponseEntity) => void): void;
 }
 
 
@@ -134,10 +141,13 @@ export declare class BaseField extends PostMessageEmitter {
     private _element;
     private _cardBrand;
     private _status;
-    private readonly onSyncCardBrand;
     constructor(params: IFieldTemplateParams);
+    private listenParentMessage;
     private removeUnlegalCharacter;
     protected validate(): void;
+    protected getErrorMessage(): string;
+    protected getUnformattedValue(): string;
+    protected formatValue(): void;
     private onFocus;
     private onBlur;
     protected onChange(evt: Event): void;
@@ -152,18 +162,25 @@ export declare class CCVField extends BaseField {
     params: IFieldTemplateParams;
     constructor(params: IFieldTemplateParams);
     protected validate(): void;
+    protected getErrorMessage(): string;
 }
 
 export declare class ExpirationDateField extends BaseField {
     params: IFieldTemplateParams;
     constructor(params: IFieldTemplateParams);
     protected validate(): void;
+    protected getErrorMessage(): string;
+    protected formatValue(): void;
+    protected getUnformattedValue(): string;
 }
 
 export declare class NumberField extends BaseField {
     params: IFieldTemplateParams;
     constructor(params: IFieldTemplateParams);
     protected validate(): void;
+    protected getErrorMessage(): string;
+    protected formatValue(): void;
+    protected getUnformattedValue(): string;
     protected onChange(evt: Event): void;
 }
 
@@ -175,11 +192,13 @@ export declare enum FieldStatus {
 
 export interface IFieldTemplateParams {
     type: FieldsType;
+    placeholder?: string;
 }
 export interface IFieldUpdate {
     type: FieldsType;
     status: FieldStatus;
     value: string;
+    errorMessage: string;
 }
 
 export interface IGetTxnTokenRequestEntity {
