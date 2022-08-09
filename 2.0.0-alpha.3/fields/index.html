@@ -1,0 +1,47 @@
+<!doctype html><html lang="en"><head><title></title><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><style>* {
+            margin: 0;
+            padding: 0;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            border: none;
+            background-color: transparent;
+        }
+
+        html,
+        body {
+            position: relative;
+            height: 100%;
+            width: 100%;
+        }
+
+        form,
+        input {
+            position: relative;
+            height: 100%;
+            width: 100%;
+        }
+
+        input {
+            padding: 10px;
+            border: 1px solid black;
+        }
+
+        input.valid {
+            border: 1px solid green;
+            color: green;
+        }
+
+        input.invalid {
+            border: 1px solid red;
+            color: red;
+        }
+
+        label {
+            position: absolute;
+            left: -9999px;
+        }
+
+        :focus {
+            outline: 0;
+        }</style><script defer="defer" src="../fields/index.js?t=e94f372616fbd47dc9c6"></script></head><body><form id="number-form" autocomplete="off"><label for="field-number">Card Number</label> <input type="tel" name="field-number" id="field-number" autocomplete="field-number" autocorrect="off" autocapitalize="none" spellcheck="false" maxlength="22"/></form><form id="expirationDate-form" autocomplete="off"><label for="field-expirationDate">Expiration Date</label> <input type="tel" name="field-expirationDate" id="field-expirationDate" autocomplete="field-expirationDate" autocorrect="off" spellcheck="false"/></form><form id="ccv-form" autocomplete="off"><label for="field-ccv">CCV</label> <input type="tel" name="field-ccv" id="field-ccv" autocomplete="field-csc" autocorrect="off" spellcheck="false" maxlength="4"/></form></body></html>
