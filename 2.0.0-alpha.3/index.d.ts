@@ -77,6 +77,7 @@ export declare class CreditCard extends EventEmitter implements ICreditCard {
     constructor();
     setup(config: ICreditCardSetup): void;
     private createFields;
+    private focusToNextField;
     private getFieldData;
     getToken(callback: (result: IGetTxnTokenResponseEntity) => void): void;
     onUpdate(callback: (result: ICreditCardUpdateData) => void): void;
