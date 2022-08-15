@@ -93,9 +93,14 @@ export declare enum CardBrand {
 }
 
 export declare type FieldsType = 'number' | 'expirationDate' | 'ccv';
-export declare const AllowedStyles: readonly ["borderColor", "width", "height"];
+export declare const AllowedStyles: readonly ["borderColor", "width", "height", "color"];
 export declare const AllowedStyleClassName: readonly ["input", "input:focus", ".valid", ".valid:focus", ".invalid", ".invalid:focus"];
 export declare type AllowedStyleClassNameType = typeof AllowedStyleClassName[number];
+export declare type AllowedStyleType = {
+    input?: Partial<Pick<CSSStyleDeclaration, typeof AllowedStyles[number]>>;
+} & {
+    [key in Exclude<AllowedStyleClassNameType, 'input'>]?: Partial<Pick<CSSStyleDeclaration, 'borderColor' | 'color'>>;
+};
 export interface ICreditCardSetup {
     fields: {
         [key in FieldsType]?: {
@@ -103,11 +108,7 @@ export interface ICreditCardSetup {
             placeholder?: string;
         };
     };
-    styles?: {
-        input?: Partial<Pick<CSSStyleDeclaration, typeof AllowedStyles[number]>>;
-    } & {
-        [key in Exclude<AllowedStyleClassNameType, 'input'>]?: Partial<Pick<CSSStyleDeclaration, 'borderColor'>>;
-    };
+    styles?: AllowedStyleType;
 }
 export interface ICreditCardData {
     canGetToken: boolean;
@@ -131,6 +132,8 @@ export interface ICreditCardUpdateData extends Omit<ICreditCardData, 'fields'> {
 }
 
 export declare const getCardBrand: (value: string) => CardBrand;
+export declare const getCardNumberMaxLength: (cardBrand: CardBrand) => number;
+export declare const getCardCCVMaxLength: (cardBrand: CardBrand) => number;
 
 export declare class FieldFrame extends PostMessageEmitter {
     element: HTMLIFrameElement;
@@ -145,32 +148,35 @@ export declare class FieldFrame extends PostMessageEmitter {
 export declare class BaseField extends PostMessageEmitter {
     params: IFieldTemplateParams;
     private _element;
-    private _cardBrand;
     private _status;
-    private _errorMessage;
+    private _cardBrand;
+    private _errors;
     constructor(params: IFieldTemplateParams);
-    private listenParentMessage;
+    private getParentMessage;
     private createStyleSheet;
-    private removeUnlegalCharacter;
-    protected validate(): void;
+    protected changeElementStatus(): void;
+    private removeNotAllowedCharacter;
     protected getUnformattedValue(): string;
     protected formatValue(): void;
+    protected afterValueFormated(): void;
+    protected validate(): void;
     private onFocus;
     private onBlur;
-    protected onChange(evt: Event): void;
-    get element(): HTMLInputElement;
-    set status(status: number);
-    get status(): number;
-    get cardBrand(): CardBrand;
-    set cardBrand(brand: CardBrand);
-    protected set errorMessage(message: string);
-    protected get errorMessage(): string;
+    private onChange;
+    protected get element(): HTMLInputElement;
+    protected set status(status: number);
+    protected get status(): number;
+    protected get cardBrand(): CardBrand;
+    protected set cardBrand(brand: CardBrand);
+    protected set errors(errors: string[]);
+    protected get errors(): string[];
 }
 
 export declare class CCVField extends BaseField {
     params: IFieldTemplateParams;
     constructor(params: IFieldTemplateParams);
     protected validate(): void;
+    protected afterValueFormated(): void;
 }
 
 export declare class ExpirationDateField extends BaseField {
@@ -179,7 +185,7 @@ export declare class ExpirationDateField extends BaseField {
     protected validate(): void;
     private getDiffMonths;
     protected formatValue(): void;
-    protected getUnformattedValue(): string;
+    protected afterValueFormated(): void;
 }
 
 export declare class NumberField extends BaseField {
@@ -187,8 +193,7 @@ export declare class NumberField extends BaseField {
     constructor(params: IFieldTemplateParams);
     protected validate(): void;
     protected formatValue(): void;
-    protected getUnformattedValue(): string;
-    protected onChange(evt: Event): void;
+    protected afterValueFormated(): void;
 }
 
 export declare enum FieldStatus {
@@ -200,11 +205,7 @@ export declare enum FieldStatus {
 export interface IFieldTemplateParams {
     type: FieldsType;
     placeholder?: string;
-    styles?: {
-        input?: Partial<Pick<CSSStyleDeclaration, typeof AllowedStyles[number]>>;
-    } & {
-        [key in Exclude<AllowedStyleClassNameType, 'input'>]?: Partial<Pick<CSSStyleDeclaration, 'borderColor'>>;
-    };
+    styles?: AllowedStyleType;
 }
 export interface IFieldUpdate {
     type: FieldsType;
