@@ -4,15 +4,10 @@ export declare global {
     }
 }
 interface IPaymentSDK {
-    setupSDK: (appId: number | string, appKey: string, serverType: ServerType) => void;
-    creditCard: CreditCard;
+    setupSDK: (appId: string, appKey: string, serverType: ServerType) => void;
+    card: CreditCard;
+    ccv: CCV;
 }
-
-export declare class ApiFrame extends PostMessageEmitter {
-    element: HTMLIFrameElement;
-    constructor(element: HTMLIFrameElement);
-}
-
 
 export declare class Config extends EventEmitter {
     private static _instance;
@@ -28,7 +23,7 @@ export declare class Config extends EventEmitter {
     get iframeDomain(): string;
 }
 
-export declare type EventHandler<T extends any> = (args: T) => void;
+export declare type EventHandler<T> = (args: T) => void;
 export declare class EventEmitter {
     private listeners;
     constructor();
@@ -37,7 +32,7 @@ export declare class EventEmitter {
     protected off(event: string): void;
 }
 
-export declare type EventHandler<T extends any> = (args: T) => void;
+export declare type EventHandler<T> = (args: T) => void;
 export declare class PostMessageEmitter {
     current: Window;
     target: Window;
@@ -67,16 +62,24 @@ export interface IApiResponse {
     message: string;
 }
 
+export declare class CCV extends EventEmitter {
+    constructor();
+    setup(config: ICreditCardSetup): void;
+    private createFields;
+    private getParentElement;
+    setupCardBrand(cardBrand: CardBrand): void;
+    onUpdate(callback: (result: ICreditCardUpdateData) => void): void;
+}
+
 interface ICreditCard {
     setup: (config: ICreditCardSetup) => void;
     getToken: (callback: (result: IGetTxnTokenResponseEntity) => void) => void;
 }
 export declare class CreditCard extends EventEmitter implements ICreditCard {
-    private setupConfig;
-    private creditCardData;
     constructor();
     setup(config: ICreditCardSetup): void;
     private createFields;
+    private getParentElement;
     private focusToNextField;
     private getFieldData;
     getToken(callback: (result: IGetTxnTokenResponseEntity) => void): void;
@@ -92,23 +95,22 @@ export declare enum CardBrand {
     UnionPay = "UnionPay"
 }
 
-export declare type FieldsType = 'number' | 'expirationDate' | 'ccv';
-export declare const AllowedStyles: readonly ["borderColor", "width", "height", "color"];
-export declare const AllowedStyleClassName: readonly ["input", "input:focus", ".valid", ".valid:focus", ".invalid", ".invalid:focus"];
-export declare type AllowedStyleClassNameType = typeof AllowedStyleClassName[number];
-export declare type AllowedStyleType = {
-    input?: Partial<Pick<CSSStyleDeclaration, typeof AllowedStyles[number]>>;
+export declare type AllowedStyleTypes = Lowercase<keyof typeof FieldStatus | 'focus'>;
+export declare type AllowedCSSStyles = Partial<Pick<CSSStyleDeclaration, 'width' | 'height' | 'borderColor' | 'color'>>;
+export declare type FieldsConfig = {
+    [key in FieldsType]?: {
+        element: string | HTMLElement;
+        placeholder?: string;
+    };
+};
+export declare type FieldsStylesConfig = {
+    [key in Exclude<AllowedStyleTypes, 'normal'>]?: Pick<AllowedCSSStyles, 'color' | 'borderColor'>;
 } & {
-    [key in Exclude<AllowedStyleClassNameType, 'input'>]?: Partial<Pick<CSSStyleDeclaration, 'borderColor' | 'color'>>;
+    normal?: AllowedCSSStyles;
 };
 export interface ICreditCardSetup {
-    fields: {
-        [key in FieldsType]?: {
-            element: string | HTMLElement;
-            placeholder?: string;
-        };
-    };
-    styles?: AllowedStyleType;
+    fields: FieldsConfig;
+    styles?: FieldsStylesConfig;
 }
 export interface ICreditCardData {
     canGetToken: boolean;
@@ -134,11 +136,25 @@ export interface ICreditCardUpdateData extends Omit<ICreditCardData, 'fields'> {
 export declare const getCardBrand: (value: string) => CardBrand;
 export declare const getCardNumberMaxLength: (cardBrand: CardBrand) => number;
 export declare const getCardCCVMaxLength: (cardBrand: CardBrand) => number;
+export declare const combineDefaultSetup: (config: ICreditCardSetup) => {
+    styles: {
+        error?: Pick<Partial<Pick<CSSStyleDeclaration, "width" | "height" | "borderColor" | "color">>, "borderColor" | "color">;
+        focus?: Pick<Partial<Pick<CSSStyleDeclaration, "width" | "height" | "borderColor" | "color">>, "borderColor" | "color">;
+        success?: Pick<Partial<Pick<CSSStyleDeclaration, "width" | "height" | "borderColor" | "color">>, "borderColor" | "color">;
+        normal?: Partial<Pick<CSSStyleDeclaration, "width" | "height" | "borderColor" | "color">>;
+    };
+    fields: import("@/payments/creditCard/models").FieldsConfig;
+};
+export declare const convertSetupStylesToCSSRule: (fieldsStyles: FieldsStylesConfig) => string[];
+
+export declare const isFieldsConfigVaild: (fields: FieldsConfig) => boolean;
+export declare const isSetupCCVFieldsVaild: (fields: FieldsConfig) => boolean;
+export declare const isSetupStyleTypeVaild: (type: AllowedStyleTypes) => boolean;
+export declare const isSetupCSSStyleVaild: (type: string, cssStyle: keyof AllowedCSSStyles) => boolean;
 
 export declare class FieldFrame extends PostMessageEmitter {
     element: HTMLIFrameElement;
     constructor(element: HTMLIFrameElement);
-    private syncClientData;
     onUpdate(callback: (result: IFieldUpdate) => void): void;
     onUpdateCardBrand(callback: (result: CardBrand) => void): void;
     onGetTokenCompleted(callback: (result: IGetTxnTokenResponseEntity) => void): void;
@@ -160,7 +176,6 @@ export declare class BaseField extends PostMessageEmitter {
     protected formatValue(): void;
     protected afterValueFormated(): void;
     protected validate(): void;
-    private onFocus;
     private onBlur;
     private onChange;
     protected get element(): HTMLInputElement;
@@ -202,10 +217,11 @@ export declare enum FieldStatus {
     Error = -1
 }
 
+export declare type FieldsType = 'number' | 'expirationDate' | 'ccv';
 export interface IFieldTemplateParams {
     type: FieldsType;
     placeholder?: string;
-    styles?: AllowedStyleType;
+    styles?: FieldsStylesConfig;
 }
 export interface IFieldUpdate {
     type: FieldsType;
