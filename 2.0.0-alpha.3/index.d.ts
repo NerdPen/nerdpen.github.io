@@ -92,6 +92,7 @@ export declare enum CardBrand {
     UnionPay = "UnionPay"
 }
 
+export declare type AllowedCardBrand = keyof typeof CardBrand;
 export declare type AllowedStyleTypes = Lowercase<keyof typeof FieldStatus | 'focus'>;
 export declare type AllowedCSSStyles = Partial<Pick<CSSStyleDeclaration, 'width' | 'height' | 'borderColor' | 'color'>>;
 export declare type FieldsConfig = {
@@ -144,10 +145,10 @@ export declare const combineDefaultSetup: (config: ICreditCardSetup) => {
 };
 export declare const convertSetupStylesToCSSRule: (fieldsStyles: FieldsStylesConfig) => string[];
 
-export declare const isFieldsConfigVaild: (fields: FieldsConfig) => boolean;
-export declare const isSetupCCVFieldsVaild: (fields: FieldsConfig) => boolean;
-export declare const isSetupStyleTypeVaild: (type: AllowedStyleTypes) => boolean;
-export declare const isSetupCSSStyleVaild: (type: string, cssStyle: keyof AllowedCSSStyles) => boolean;
+export declare const isFieldsConfigValid: (fields: FieldsConfig) => boolean;
+export declare const isSetupCCVFieldsValid: (fields: FieldsConfig) => boolean;
+export declare const isSetupStyleTypeValid: (type: AllowedStyleTypes) => boolean;
+export declare const isSetupCSSStyleValid: (type: string, cssStyle: keyof AllowedCSSStyles) => boolean;
 
 export declare class FieldFrame extends PostMessageEmitter {
     element: HTMLIFrameElement;
