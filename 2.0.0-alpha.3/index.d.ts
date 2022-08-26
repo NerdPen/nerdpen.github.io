@@ -57,10 +57,6 @@ export declare type PostMessage<T> = {
     type: string;
     payload: T;
 };
-export interface IApiResponse {
-    statusCode: string;
-    message: string;
-}
 
 export declare class CCV extends EventEmitter {
     constructor();
@@ -69,11 +65,12 @@ export declare class CCV extends EventEmitter {
     private getParentElement;
     setupCardBrand(cardBrand: CardBrand): void;
     onUpdate(callback: (result: ICreditCardUpdateData) => void): void;
+    getTxnLastToken(callback: (result: IGetTxnLastTokenResponseEntity) => void): void;
 }
 
 interface ICreditCard {
     setup: (config: ICreditCardSetup) => void;
-    getToken: (callback: (result: IGetTxnTokenResponseEntity) => void) => void;
+    getTxnToken: (callback: (result: IGetTxnTokenResponseEntity) => void) => void;
 }
 export declare class CreditCard extends EventEmitter implements ICreditCard {
     constructor();
@@ -82,7 +79,7 @@ export declare class CreditCard extends EventEmitter implements ICreditCard {
     private getParentElement;
     private focusToNextField;
     private getFieldData;
-    getToken(callback: (result: IGetTxnTokenResponseEntity) => void): void;
+    getTxnToken(callback: (result: IGetTxnTokenResponseEntity) => void): void;
     onUpdate(callback: (result: ICreditCardUpdateData) => void): void;
 }
 
@@ -157,7 +154,8 @@ export declare class FieldFrame extends PostMessageEmitter {
     constructor(element: HTMLIFrameElement);
     onUpdate(callback: (result: IFieldUpdate) => void): void;
     onUpdateCardBrand(callback: (result: CardBrand) => void): void;
-    onGetTokenCompleted(callback: (result: IGetTxnTokenResponseEntity) => void): void;
+    onGetTxnTokenCompleted(callback: (result: IGetTxnTokenResponseEntity) => void): void;
+    onGetTxnLastTokenCompleted(callback: (result: IGetTxnLastTokenResponseEntity) => void): void;
 }
 
 
@@ -230,15 +228,12 @@ export interface IFieldUpdate {
     errorMessage: string;
 }
 
-export interface IGetTxnTokenRequestEntity {
-    appId: string;
-    appKey: string;
-    sdkVer: string;
+export interface IGetTxnTokenRequestEntity extends IApiRequestEntity {
     cardNumber: string;
     cardExpiryDate: string;
     cardSecurityCode: string;
 }
-export interface IGetTxnTokenResponseEntity extends IApiResponse {
+export interface IGetTxnTokenResponseEntity extends IApiResponseEntity {
     clinetIP: string;
     txnToken: string;
     cardInfo: {
@@ -252,3 +247,22 @@ export interface IGetTxnTokenResponseEntity extends IApiResponse {
     };
 }
 export declare const getTxnToken: (data: IGetTxnTokenRequestEntity) => Promise<IGetTxnTokenResponseEntity>;
+export interface IGetTxnLastTokenRequestEntity extends IApiRequestEntity {
+    cardBrand: CardBrand;
+    cardSecurityCode: string;
+}
+export interface IGetTxnLastTokenResponseEntity extends IApiResponseEntity {
+    txnLastToken: string;
+}
+export declare const getTxnLastToken: (data: IGetTxnLastTokenRequestEntity) => Promise<IGetTxnTokenResponseEntity>;
+
+export interface IApiRequestEntity {
+    appId: string;
+    appKey: string;
+    sdkVer: string;
+}
+export interface IApiResponseEntity {
+    statusCode: string;
+    message: string;
+    clinetIP: string;
+}
