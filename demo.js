@@ -69,7 +69,7 @@
                           })),
                       2 === c &&
                           (window.Payments91APP.ccv.setup(l),
-                          window.Payments91APP.ccv.setupCardBrand(
+                          window.Payments91APP.ccv.setCardBrand(
                               document.getElementById('cardBrand').value.toUpperCase()
                           ),
                           window.Payments91APP.ccv.onUpdate((e) => {
