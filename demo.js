@@ -45,38 +45,38 @@
                                   e.querySelector('#setupFieldBtn').addEventListener('click', (e) => {
                                       (n.appId = r.value),
                                           (n.appKey = o.value),
-                                          window.SDK.setupSDK(n.appId, n.appKey, n.serverType),
+                                          window.Payments91APP.setupSDK(n.appId, n.appKey, n.serverType),
                                           (t = JSON.parse(c.value)),
                                           a(1);
                                   }),
                                   e.querySelector('#setupCCVBtn').addEventListener('click', (e) => {
                                       (n.appId = r.value),
                                           (n.appKey = o.value),
-                                          window.SDK.setupSDK(n.appId, n.appKey, n.serverType),
+                                          window.Payments91APP.setupSDK(n.appId, n.appKey, n.serverType),
                                           (l = JSON.parse(d.value)),
                                           a(2);
                                   });
                           })(),
                       1 === c &&
                           (e.querySelector('#getTxnTokenBtn').addEventListener('click', (e) => {
-                              window.SDK.card.getTxnToken((e) => {
+                              window.Payments91APP.card.getTxnToken((e) => {
                                   o.innerHTML = JSON.stringify(e, null, 4);
                               });
                           }),
-                          window.SDK.card.setup(t),
-                          window.SDK.card.onUpdate((e) => {
+                          window.Payments91APP.card.setup(t),
+                          window.Payments91APP.card.onUpdate((e) => {
                               o.innerHTML = JSON.stringify(e, null, 4);
                           })),
                       2 === c &&
-                          (window.SDK.ccv.setup(l),
-                          window.SDK.ccv.setupCardBrand(
+                          (window.Payments91APP.ccv.setup(l),
+                          window.Payments91APP.ccv.setupCardBrand(
                               document.getElementById('cardBrand').value.toUpperCase()
                           ),
-                          window.SDK.ccv.onUpdate((e) => {
+                          window.Payments91APP.ccv.onUpdate((e) => {
                               o.innerHTML = JSON.stringify(e, null, 4);
                           }),
                           e.querySelector('#getTxnLastTokenBtn').addEventListener('click', (e) => {
-                              window.SDK.ccv.getTxnLastToken((e) => {
+                              window.Payments91APP.ccv.getTxnLastToken((e) => {
                                   o.innerHTML = JSON.stringify(e, null, 4);
                               });
                           })))
