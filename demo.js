@@ -2,7 +2,7 @@
     let e,
         r = [],
         o = document.getElementById('logger'),
-        n = {appId: '12132321', appKey: '0cbfd82c', serverType: 'sandbox'},
+        n = {appId: '12132321', appKey: '0cbfd82c', serverType: 'production'},
         t = {
             fields: {
                 number: {element: '#card-number', placeholder: '信用卡號'},
